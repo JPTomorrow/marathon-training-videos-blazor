@@ -56,3 +56,11 @@ C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug
 C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\MarathonTutorialWebsite.pdb
 C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\MarathonTutorialWebsite.genruntimeconfig.cache
 C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\MarathonTutorialWebsite.csproj.CopyComplete
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\scopedcss\Pages\Index.razor.rz.scp.css
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\RazorDeclaration\Pages\StandardHeaderOne.razor.g.cs
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\Razor\Pages\StandardHeaderOne.razor.g.cs
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\RazorDeclaration\Pages\YoutubeVideoList.razor.g.cs
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\Razor\Pages\YoutubeVideoList.razor.g.cs
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\scopedcss\Pages\YoutubeVideoList.razor.rz.scp.css
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\RazorDeclaration\Pages\TutorialVideo.razor.g.cs
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\Razor\Pages\TutorialVideo.razor.g.cs

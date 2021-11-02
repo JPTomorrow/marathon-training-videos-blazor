@@ -1,0 +1,31 @@
+@page "/standard_header_one"
+
+<style>
+    h1 {
+        color: ghostwhite;
+        width: 70%;
+        padding-top: 20px;
+    }
+
+    .underline {
+        content: "";
+        background-color: ghostwhite;
+        height: 1px;
+        display: block;
+        position: relative;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    }
+</style>
+
+<h1>@ChildContent</h1>
+@if (Underlined == true)
+{
+    <div class="underline"></div>
+}
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    [Parameter]
+    public bool Underlined { get; set; } = false;
+}

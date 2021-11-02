@@ -12,6 +12,39 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+        "HashCode": 725806217,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Pages.Counter",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.Counter"
+        }
+      },
+      {
+        "HashCode": 1113206940,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Pages.Counter",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MarathonTutorialWebsite.Pages.Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.Counter",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -1180718933,
         "Kind": "Components.Component",
         "Name": "MarathonTutorialWebsite.Pages.FetchData",
@@ -41,6 +74,114 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "MarathonTutorialWebsite.Pages.FetchData",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -589978479,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Pages.StandardHeaderOne",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "StandardHeaderOne"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "ChildContent",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Metadata": {
+              "Common.PropertyName": "ChildContent",
+              "Components.ChildContent": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Underlined",
+            "TypeName": "System.Boolean",
+            "Metadata": {
+              "Common.PropertyName": "Underlined"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.StandardHeaderOne"
+        }
+      },
+      {
+        "HashCode": -227539213,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Pages.StandardHeaderOne",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MarathonTutorialWebsite.Pages.StandardHeaderOne"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "ChildContent",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Metadata": {
+              "Common.PropertyName": "ChildContent",
+              "Components.ChildContent": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Underlined",
+            "TypeName": "System.Boolean",
+            "Metadata": {
+              "Common.PropertyName": "Underlined"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.StandardHeaderOne",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1712132478,
+        "Kind": "Components.ChildContent",
+        "Name": "MarathonTutorialWebsite.Pages.StandardHeaderOne.ChildContent",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChildContent",
+            "ParentTag": "StandardHeaderOne"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.StandardHeaderOne.ChildContent",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": 2048806765,
+        "Kind": "Components.ChildContent",
+        "Name": "MarathonTutorialWebsite.Pages.StandardHeaderOne.ChildContent",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChildContent",
+            "ParentTag": "MarathonTutorialWebsite.Pages.StandardHeaderOne"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.StandardHeaderOne.ChildContent",
+          "Components.IsSpecialKind": "Components.ChildContent",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -78,35 +219,104 @@
         }
       },
       {
-        "HashCode": 725806217,
+        "HashCode": 1314763196,
         "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Pages.Counter",
+        "Name": "MarathonTutorialWebsite.Pages.YoutubeVideoList",
         "AssemblyName": "MarathonTutorialWebsite",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Counter"
+            "TagName": "YoutubeVideoList"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Pages.Counter"
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.YoutubeVideoList"
         }
       },
       {
-        "HashCode": 1113206940,
+        "HashCode": -493740319,
         "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Pages.Counter",
+        "Name": "MarathonTutorialWebsite.Pages.YoutubeVideoList",
         "AssemblyName": "MarathonTutorialWebsite",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "MarathonTutorialWebsite.Pages.Counter"
+            "TagName": "MarathonTutorialWebsite.Pages.YoutubeVideoList"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Pages.Counter",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.YoutubeVideoList",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1832976116,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Pages.TutorialVideo",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "TutorialVideo"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Url",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Url"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.TutorialVideo"
+        }
+      },
+      {
+        "HashCode": -12067768,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Pages.TutorialVideo",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MarathonTutorialWebsite.Pages.TutorialVideo"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Url",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Url"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.TutorialVideo",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -193,39 +403,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "MarathonTutorialWebsite.Shared.SurveyPrompt",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 313727714,
-        "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Shared.NavMenu",
-        "AssemblyName": "MarathonTutorialWebsite",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": -341485683,
-        "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Shared.NavMenu",
-        "AssemblyName": "MarathonTutorialWebsite",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "MarathonTutorialWebsite.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -322,6 +499,39 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "MarathonTutorialWebsite.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 313727714,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Shared.NavMenu",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": -341485683,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Shared.NavMenu",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MarathonTutorialWebsite.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -15953,6 +16163,11 @@
       "FileKind": "component"
     },
     {
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Pages\\TutorialVideo.razor",
+      "TargetPath": "Pages\\TutorialVideo.razor",
+      "FileKind": "component"
+    },
+    {
       "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Shared\\MainLayout.razor",
       "TargetPath": "Shared\\MainLayout.razor",
       "FileKind": "component"
@@ -15978,8 +16193,18 @@
       "FileKind": "component"
     },
     {
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Pages\\StandardHeaderOne.razor",
+      "TargetPath": "Pages\\StandardHeaderOne.razor",
+      "FileKind": "component"
+    },
+    {
       "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Pages\\Counter.razor",
       "TargetPath": "Pages\\Counter.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Pages\\YoutubeVideoList.razor",
+      "TargetPath": "Pages\\YoutubeVideoList.razor",
       "FileKind": "component"
     }
   ],

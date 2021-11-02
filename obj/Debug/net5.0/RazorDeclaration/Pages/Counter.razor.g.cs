@@ -82,14 +82,6 @@ using MarathonTutorialWebsite.Shared;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\Counter.razor"
-using MarathonTutorialWebsite.Data;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -97,29 +89,6 @@ using MarathonTutorialWebsite.Data;
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 12 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\Counter.razor"
-       
-    private int currentCount { get; set; }
-
-    private int incrementAmount { get; set; } = 1;
-
-    protected override async Task OnInitializedAsync()
-    {
-        currentCount = CData.StoredCount;
-    }
-
-    private void IncrementCount()
-    {
-        currentCount = CData.StoredCount;
-        currentCount += incrementAmount;
-        CData.StoredCount = currentCount;
-    }
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private CounterData CData { get; set; }
     }
 }
 #pragma warning restore 1591

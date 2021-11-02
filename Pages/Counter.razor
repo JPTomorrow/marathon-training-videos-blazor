@@ -1,28 +1,29 @@
-@page "/counter"
+@* @page "/counter"
 
-@using MarathonTutorialWebsite.Data
-@inject CounterData CData;
+    @using MarathonTutorialWebsite.Data
+    @inject CounterData CData;
 
-<h1>Counter</h1>
+    <h1>Counter</h1>
 
-<p>Current count: @currentCount</p>
+    <p>Current count: @currentCount</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+    <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
-@code {
+    @code {
     private int currentCount { get; set; }
 
     private int incrementAmount { get; set; } = 1;
 
     protected override async Task OnInitializedAsync()
     {
-        currentCount = CData.StoredCount;
+    currentCount = CData.StoredCount;
     }
 
     private void IncrementCount()
     {
-        currentCount = CData.StoredCount;
-        currentCount += incrementAmount;
-        CData.StoredCount = currentCount;
+    currentCount = CData.StoredCount;
+    currentCount += incrementAmount;
+    CData.StoredCount = currentCount;
     }
-}
+    }
+*@

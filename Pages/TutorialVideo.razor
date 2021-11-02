@@ -1,0 +1,17 @@
+@page "/tutorial_video"
+@page "/tutorial_video/{title}/{url}"
+
+<style>
+    h1 {
+        color: ghostwhite;
+    }
+</style>
+
+<h1>@Title @Url</h1>
+
+@functions {
+    [Parameter]
+    public string Title { get; set; }
+    [Parameter]
+    public string Url { get; set; }
+}

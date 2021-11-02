@@ -1,0 +1,51 @@
+﻿@page "/youtube_video_list"
+
+@using MarathonTutorialWebsite.Data
+@inject YoutubeVideoService youtubeVideoService
+@inject NavigationManager navMan
+
+@if (videos == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var v in videos)
+            {
+                <tr>
+                    <td>
+                        <a href="" @onclick="() => GoToVideoPage(v.Title, v.VideoUrl)" @onclick:preventDefault>
+                            @v.Title
+                        </a>
+                    </td>
+                    <td>@v.Description</td>
+                    <td>@v.VideoUrl</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private YoutubeVideoEntry[] videos;
+
+    protected override void OnInitialized()
+    {
+        videos = youtubeVideoService.GetEntries();
+    }
+
+    private void GoToVideoPage(string title, string link)
+    {
+        var url = "/tutorial_video/" + title + "/" + link;
+        navMan.NavigateTo(url);
+    }
+}
