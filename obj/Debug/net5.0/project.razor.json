@@ -407,6 +407,39 @@
         }
       },
       {
+        "HashCode": 313727714,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Shared.NavMenu",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": -341485683,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Shared.NavMenu",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MarathonTutorialWebsite.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -1273608063,
         "Kind": "Components.Component",
         "Name": "MarathonTutorialWebsite.Shared.MainLayout",
@@ -503,35 +536,35 @@
         }
       },
       {
-        "HashCode": 313727714,
+        "HashCode": -979410443,
         "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Shared.NavMenu",
+        "Name": "MarathonTutorialWebsite.Shared.ChooseLanguage",
         "AssemblyName": "MarathonTutorialWebsite",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NavMenu"
+            "TagName": "ChooseLanguage"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Shared.NavMenu"
+          "Common.TypeName": "MarathonTutorialWebsite.Shared.ChooseLanguage"
         }
       },
       {
-        "HashCode": -341485683,
+        "HashCode": -21542579,
         "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Shared.NavMenu",
+        "Name": "MarathonTutorialWebsite.Shared.ChooseLanguage",
         "AssemblyName": "MarathonTutorialWebsite",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "MarathonTutorialWebsite.Shared.NavMenu"
+            "TagName": "MarathonTutorialWebsite.Shared.ChooseLanguage"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Shared.NavMenu",
+          "Common.TypeName": "MarathonTutorialWebsite.Shared.ChooseLanguage",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16200,6 +16233,11 @@
     {
       "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Pages\\Counter.razor",
       "TargetPath": "Pages\\Counter.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Shared\\ChooseLanguage.razor",
+      "TargetPath": "Shared\\ChooseLanguage.razor",
       "FileKind": "component"
     },
     {

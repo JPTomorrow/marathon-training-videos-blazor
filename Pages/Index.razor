@@ -1,4 +1,5 @@
 @page "/"
+@inject IStringLocalizer<App> localizer
 
-<StandardHeaderOne>Training Videos</StandardHeaderOne>
+<StandardHeaderOne>@localizer["Training Videos"]</StandardHeaderOne>
 <YoutubeVideoList />

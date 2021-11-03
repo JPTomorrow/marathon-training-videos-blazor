@@ -1,0 +1,68 @@
+@inject NavigationManager NavigationManager
+@inject IConfiguration Configuration
+@inject IJSRuntime JSRuntime
+
+<style>
+    #site-lang {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        color: grey;
+        float: left;
+        padding-right: 15px;
+        font-size: 10pt;
+    }
+
+    #language-selection-container {
+        width: auto;
+        vertical-align: middle;
+        margin-left: auto;
+    }
+
+    #select-language-form {
+        float: right;
+    }
+</style>
+
+@if (cultures != null)
+{
+    <div id="language-selection-container">
+        <span id="site-lang">Site Language<br />Idioma del sitio</span>
+        <form id="select-language-form" class="form-inline">
+            <select class="form-control mr-2" @bind="selectedCulture">
+                @foreach (var culture in cultures)
+                {
+                    <option value="@culture.Key">@culture.Value</option>
+                }
+            </select>
+            <button type="button" class="btn btn-outline-primary" @onclick="RequestCultureChange">Change Language</button>
+        </form>
+    </div>
+}
+
+@code {
+    private string selectedCulture = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
+    private Dictionary<string, string> cultures;
+    protected override void OnInitialized()
+    {
+        cultures = Configuration.GetSection("Cultures")
+        .GetChildren().ToDictionary(x => x.Key, x => x.Value);
+    }
+
+    private void RequestCultureChange()
+    {
+
+        if (string.IsNullOrWhiteSpace(selectedCulture)) return;
+
+        var uri = new Uri(NavigationManager.Uri)
+        .GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
+
+        var query = $"?culture={Uri.EscapeDataString(selectedCulture)}&" +
+        $"redirectUri={Uri.EscapeDataString(uri)}";
+
+        var prompt = "URI: " + uri + "\n\n" + Uri.EscapeDataString(uri) + "\n\n" + "QUERY: " + query;
+        JSRuntime.InvokeVoidAsync("alert", prompt);
+
+        NavigationManager.NavigateTo("/Culture/SetCulture" + query, forceLoad: true);
+    }
+}

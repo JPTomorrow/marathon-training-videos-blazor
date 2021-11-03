@@ -312,6 +312,11 @@
         "runtime": {
           "MarathonTutorialWebsite.dll": {}
         },
+        "resources": {
+          "es/MarathonTutorialWebsite.resources.dll": {
+            "locale": "es"
+          }
+        },
         "compile": {
           "MarathonTutorialWebsite.dll": {}
         }

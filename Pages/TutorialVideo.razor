@@ -1,17 +1,69 @@
 @page "/tutorial_video"
 @page "/tutorial_video/{title}/{url}"
+@inject IStringLocalizer<App> localizer
+@inject IJSRuntime JSRuntime
 
 <style>
     h1 {
+        padding-top: 25px;
+        padding-bottom: 25px;
         color: ghostwhite;
+    }
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .fluidMedia {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .fluidMedia iframe {
+        width: 85vw;
+        height: 64vw;
+        border-radius: 20px;
+    }
+
+    .description {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .description p {
+        color: ghostwhite;
+        text-align: left;
     }
 </style>
 
-<h1>@Title @Url</h1>
+<div class="container">
+    <h1 id="title">@Title</h1>
+
+    <div class="fluidMedia">
+        <iframe src="@Url" />
+    </div>
+
+    <div class="description">
+        <StandardHeaderOne Underlined="true">@localizer["TVP_Instructions"]</StandardHeaderOne>
+        <p>@localizer["TVP_Instruction_Steps"]</p>
+    </div>
+</div>
 
 @functions {
     [Parameter]
     public string Title { get; set; }
     [Parameter]
     public string Url { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        Title = Title ?? "";
+        Url = Url ?? "";
+
+        var prompt = Url;
+        JSRuntime.InvokeVoidAsync("alert", prompt);
+    }
 }

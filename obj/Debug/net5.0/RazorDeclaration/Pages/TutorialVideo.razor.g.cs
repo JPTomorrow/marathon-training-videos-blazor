@@ -82,6 +82,20 @@ using MarathonTutorialWebsite.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
+using Microsoft.Extensions.Configuration;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
+using Microsoft.Extensions.Localization;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/tutorial_video")]
     [Microsoft.AspNetCore.Components.RouteAttribute("/tutorial_video/{title}/{url}")]
     public partial class TutorialVideo : Microsoft.AspNetCore.Components.ComponentBase
@@ -92,16 +106,27 @@ using MarathonTutorialWebsite.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TutorialVideo.razor"
+#line 55 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TutorialVideo.razor"
             
     [Parameter]
     public string Title { get; set; }
     [Parameter]
     public string Url { get; set; }
 
+    protected override void OnParametersSet()
+    {
+        Title = Title ?? "";
+        Url = Url ?? "";
+
+        var prompt = Url;
+        JSRuntime.InvokeVoidAsync("alert", prompt);
+    }
+
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JSRuntime { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IStringLocalizer<App> localizer { get; set; }
     }
 }
 #pragma warning restore 1591

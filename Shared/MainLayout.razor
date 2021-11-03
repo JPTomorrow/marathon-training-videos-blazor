@@ -1,17 +1,15 @@
 @inherits LayoutComponentBase
+@inject IStringLocalizer<App> localizer
 
 <div class="page">
-    @* <div class="sidebar">
-        <NavMenu />
-        </div> *@
-
     <div class="main">
         <div class="top-row px-4">
             <img src="/assets/logo.png" alt="logo" class="logo" />
             <ul class="nav-links">
-                <li><a href="https://docs.microsoft.com/aspnet/" target="_blank">Training Videos</a></li>
-                <li><a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a></li>
+                <li><a href="https://docs.microsoft.com/aspnet/" target="_blank">@localizer["Training Videos"]</a></li>
+                <li><a href="https://docs.microsoft.com/aspnet/" target="_blank">@localizer["About"]</a></li>
             </ul>
+            <ChooseLanguage />
         </div>
 
         <div class="container-type-one">

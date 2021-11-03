@@ -12,5 +12,4 @@ namespace MarathonTutorialWebsite.Data
             return videos;
         }
     }
-    // https://www.youtube.com/embed/KZCIIg1Ti2w
 }

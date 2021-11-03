@@ -1,10 +1,21 @@
 @page "/standard_header_one"
 
 <style>
-    h1 {
+    #child-content {
         color: ghostwhite;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+
+    }
+
+    #h-one-container {
         width: 70%;
-        padding-top: 20px;
+        padding: 0;
+        margin: 0;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
     }
 
     .underline {
@@ -17,11 +28,15 @@
     }
 </style>
 
-<h1>@ChildContent</h1>
-@if (Underlined == true)
-{
-    <div class="underline"></div>
-}
+<div id="h-one-container">
+    <h1 id="child-content">@ChildContent</h1>
+
+    @if (Underlined == true)
+    {
+        <div class="underline"></div>
+    }
+</div>
+
 
 @code {
     [Parameter]

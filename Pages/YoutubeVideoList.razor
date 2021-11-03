@@ -1,8 +1,10 @@
 ﻿@page "/youtube_video_list"
 
 @using MarathonTutorialWebsite.Data
+@using System.Text.Encodings.Web
 @inject YoutubeVideoService youtubeVideoService
 @inject NavigationManager navMan
+@inject IStringLocalizer<App> localizer
 
 @if (videos == null)
 {
@@ -13,9 +15,8 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>URL</th>
+                <th>@localizer["TVL_Title"]</th>
+                <th>@localizer["TVL_Description"]</th>
             </tr>
         </thead>
         <tbody>
@@ -28,7 +29,6 @@ else
                         </a>
                     </td>
                     <td>@v.Description</td>
-                    <td>@v.VideoUrl</td>
                 </tr>
             }
         </tbody>
@@ -45,7 +45,7 @@ else
 
     private void GoToVideoPage(string title, string link)
     {
-        var url = "/tutorial_video/" + title + "/" + link;
+        var url = "/tutorial_video/" + title + "/" + UrlEncoder.Create().Encode(link);
         navMan.NavigateTo(url);
     }
 }

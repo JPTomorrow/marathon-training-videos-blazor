@@ -83,8 +83,29 @@ using MarathonTutorialWebsite.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
+using Microsoft.Extensions.Configuration;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
+using Microsoft.Extensions.Localization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\YoutubeVideoList.razor"
 using MarathonTutorialWebsite.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\YoutubeVideoList.razor"
+using System.Text.Encodings.Web;
 
 #line default
 #line hidden
@@ -109,13 +130,14 @@ using MarathonTutorialWebsite.Data;
 
     private void GoToVideoPage(string title, string link)
     {
-        var url = "/tutorial_video/" + title + "/" + link;
+        var url = "/tutorial_video/" + title + "/" + UrlEncoder.Create().Encode(link);
         navMan.NavigateTo(url);
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IStringLocalizer<App> localizer { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navMan { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private YoutubeVideoService youtubeVideoService { get; set; }
     }

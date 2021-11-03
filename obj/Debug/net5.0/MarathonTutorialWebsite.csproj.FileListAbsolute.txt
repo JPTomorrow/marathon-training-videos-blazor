@@ -64,3 +64,11 @@ C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug
 C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\scopedcss\Pages\YoutubeVideoList.razor.rz.scp.css
 C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\RazorDeclaration\Pages\TutorialVideo.razor.g.cs
 C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\Razor\Pages\TutorialVideo.razor.g.cs
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\RazorDeclaration\Shared\ChooseLanguage.razor.g.cs
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\Razor\Shared\ChooseLanguage.razor.g.cs
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\bin\Debug\net5.0\es\MarathonTutorialWebsite.resources.dll
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\MarathonTutorialWebsite.Resources.App.resources
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\MarathonTutorialWebsite.Resources.App.es.resources
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\MarathonTutorialWebsite.csproj.GenerateResource.cache
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\es\MarathonTutorialWebsite.resources.cs
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\es\MarathonTutorialWebsite.resources.dll
