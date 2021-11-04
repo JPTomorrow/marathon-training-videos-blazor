@@ -104,7 +104,7 @@ using Microsoft.Extensions.Localization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 43 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Shared\ChooseLanguage.razor"
+#line 55 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Shared\ChooseLanguage.razor"
        
     private string selectedCulture = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
     private Dictionary<string, string> cultures;
@@ -125,8 +125,8 @@ using Microsoft.Extensions.Localization;
         var query = $"?culture={Uri.EscapeDataString(selectedCulture)}&" +
         $"redirectUri={Uri.EscapeDataString(uri)}";
 
-        var prompt = "URI: " + uri + "\n\n" + Uri.EscapeDataString(uri) + "\n\n" + "QUERY: " + query;
-        JSRuntime.InvokeVoidAsync("alert", prompt);
+        /* var prompt = "URI: " + uri + "\n\n" + Uri.EscapeDataString(uri) + "\n\n" + "QUERY: " + query;
+        JSRuntime.InvokeVoidAsync("alert", prompt); */
 
         NavigationManager.NavigateTo("/Culture/SetCulture" + query, forceLoad: true);
     }

@@ -33,6 +33,25 @@
     </div>
 
     <script src="_framework/blazor.server.js"></script>
+    <script src="http://www.youtube.com/player_api"></script>
+
+    <!-- TODO - This code should be in TutorialVideo.razor but if cant be because of js fuckyness. Check back in the future if there is a solution to this and do it. -->
+    <script>
+        window.thisAppFunctions =
+        {
+            EnableTestFormButton: function () {
+                alert("setting handle");
+                var video = document.getElementById("tvp-video");
+                var button = document.getElementById("tvp-test-btn");
+
+                video.addEventListener("ended", function () {
+                    alert("enabling video");
+                    button.disabled = false;
+                }, true);
+
+            }
+        }
+    </script>
 </body>
 
 </html>

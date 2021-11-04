@@ -22,6 +22,17 @@
     #select-language-form {
         float: right;
     }
+
+    #cl-submit-btn {
+        background-color: transparent;
+        border: 1px solid orangered;
+        color: orangered;
+    }
+
+    #cl-submit-btn:hover {
+        background-color: orangered;
+        color: ghostwhite;
+    }
 </style>
 
 @if (cultures != null)
@@ -35,7 +46,8 @@
                     <option value="@culture.Key">@culture.Value</option>
                 }
             </select>
-            <button type="button" class="btn btn-outline-primary" @onclick="RequestCultureChange">Change Language</button>
+            <button id="cl-submit-btn" type="button" class="btn btn-outline-primary" @onclick="RequestCultureChange">Change
+                Language</button>
         </form>
     </div>
 }
@@ -60,8 +72,8 @@
         var query = $"?culture={Uri.EscapeDataString(selectedCulture)}&" +
         $"redirectUri={Uri.EscapeDataString(uri)}";
 
-        var prompt = "URI: " + uri + "\n\n" + Uri.EscapeDataString(uri) + "\n\n" + "QUERY: " + query;
-        JSRuntime.InvokeVoidAsync("alert", prompt);
+        /* var prompt = "URI: " + uri + "\n\n" + Uri.EscapeDataString(uri) + "\n\n" + "QUERY: " + query;
+        JSRuntime.InvokeVoidAsync("alert", prompt); */
 
         NavigationManager.NavigateTo("/Culture/SetCulture" + query, forceLoad: true);
     }

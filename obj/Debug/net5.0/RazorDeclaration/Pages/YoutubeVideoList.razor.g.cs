@@ -119,7 +119,7 @@ using System.Text.Encodings.Web;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\YoutubeVideoList.razor"
+#line 41 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\YoutubeVideoList.razor"
        
     private YoutubeVideoEntry[] videos;
 

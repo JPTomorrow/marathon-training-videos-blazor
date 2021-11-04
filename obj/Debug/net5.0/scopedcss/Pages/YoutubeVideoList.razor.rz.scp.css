@@ -5,3 +5,16 @@ th[b-c9tz53hqp8] {
 tr[b-c9tz53hqp8] {
   color: ghostwhite;
 }
+
+#ytvl-container[b-c9tz53hqp8] {
+  padding-bottom: 20px !important;
+}
+
+.tvl-video-entry[b-c9tz53hqp8] {
+  color: orangered;
+}
+
+.tvl-video-entry:hover[b-c9tz53hqp8] {
+  color: maroon;
+  text-decoration: none;
+}

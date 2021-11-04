@@ -106,20 +106,25 @@ using Microsoft.Extensions.Localization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 55 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TutorialVideo.razor"
+#line 83 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TutorialVideo.razor"
             
     [Parameter]
     public string Title { get; set; }
     [Parameter]
     public string Url { get; set; }
 
+    public async Task IFrameLoaded(ProgressEventArgs e)
+    {
+        await JSRuntime.InvokeVoidAsync("thisAppFunctions.EnableTestFormButton", null);
+    }
+
     protected override void OnParametersSet()
     {
         Title = Title ?? "";
         Url = Url ?? "";
 
-        var prompt = Url;
-        JSRuntime.InvokeVoidAsync("alert", prompt);
+        /*var prompt = Url;
+        JSRuntime.InvokeVoidAsync("alert", prompt); */
     }
 
 #line default

@@ -321,39 +321,6 @@
         }
       },
       {
-        "HashCode": 1091629344,
-        "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.App",
-        "AssemblyName": "MarathonTutorialWebsite",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.App"
-        }
-      },
-      {
-        "HashCode": -146133613,
-        "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.App",
-        "AssemblyName": "MarathonTutorialWebsite",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "MarathonTutorialWebsite.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.App",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 73349508,
         "Kind": "Components.Component",
         "Name": "MarathonTutorialWebsite.Shared.SurveyPrompt",
@@ -436,6 +403,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "MarathonTutorialWebsite.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -979410443,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Shared.ChooseLanguage",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChooseLanguage"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Shared.ChooseLanguage"
+        }
+      },
+      {
+        "HashCode": -21542579,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Shared.ChooseLanguage",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MarathonTutorialWebsite.Shared.ChooseLanguage"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Shared.ChooseLanguage",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -536,35 +536,35 @@
         }
       },
       {
-        "HashCode": -979410443,
+        "HashCode": 1091629344,
         "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Shared.ChooseLanguage",
+        "Name": "MarathonTutorialWebsite.App",
         "AssemblyName": "MarathonTutorialWebsite",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ChooseLanguage"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Shared.ChooseLanguage"
+          "Common.TypeName": "MarathonTutorialWebsite.App"
         }
       },
       {
-        "HashCode": -21542579,
+        "HashCode": -146133613,
         "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Shared.ChooseLanguage",
+        "Name": "MarathonTutorialWebsite.App",
         "AssemblyName": "MarathonTutorialWebsite",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "MarathonTutorialWebsite.Shared.ChooseLanguage"
+            "TagName": "MarathonTutorialWebsite.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Shared.ChooseLanguage",
+          "Common.TypeName": "MarathonTutorialWebsite.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

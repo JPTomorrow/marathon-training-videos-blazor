@@ -37,18 +37,46 @@
         color: ghostwhite;
         text-align: left;
     }
+
+    #tvp-instructions {
+        color: ghostwhite;
+
+    }
+
+    #tvp-instructions li {
+        color: ghostwhite;
+        text-align: left;
+    }
+
+    #tvp-test-btn {
+        width: 50%;
+        margin-top: 50px;
+        background-color: transparent;
+        border: 1px solid orangered;
+        color: orangered;
+    }
+
+    #tvp-test-btn:hover {
+        background-color: orangered;
+        color: ghostwhite;
+    }
 </style>
 
 <div class="container">
     <h1 id="title">@Title</h1>
 
     <div class="fluidMedia">
-        <iframe src="@Url" />
+        <iframe @onload="IFrameLoaded" id="tvp-video" src="@Url?autoplay=0&showinfo=0&controls=1&modestbranding=1" />
     </div>
 
     <div class="description">
         <StandardHeaderOne Underlined="true">@localizer["TVP_Instructions"]</StandardHeaderOne>
-        <p>@localizer["TVP_Instruction_Steps"]</p>
+        <p>@localizer["TVP_Instruction_Steps_P1"]</p>
+        <ol id="tvp-instructions">
+            <li>@localizer["TVP_Instruction_Steps_UL1"]</li>
+            <li>@localizer["TVP_Instruction_Steps_UL2"]</li>
+        </ol>
+        <button id="tvp-test-btn" type="button" class="btn btn-primary" disabled>@localizer["TVP_Test_Button"]</button>
     </div>
 </div>
 
@@ -58,12 +86,17 @@
     [Parameter]
     public string Url { get; set; }
 
+    public async Task IFrameLoaded(ProgressEventArgs e)
+    {
+        await JSRuntime.InvokeVoidAsync("thisAppFunctions.EnableTestFormButton", null);
+    }
+
     protected override void OnParametersSet()
     {
         Title = Title ?? "";
         Url = Url ?? "";
 
-        var prompt = Url;
-        JSRuntime.InvokeVoidAsync("alert", prompt);
+        /*var prompt = Url;
+        JSRuntime.InvokeVoidAsync("alert", prompt); */
     }
 }

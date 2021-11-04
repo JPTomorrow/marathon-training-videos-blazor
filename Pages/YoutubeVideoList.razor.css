@@ -5,3 +5,16 @@ th {
 tr {
   color: ghostwhite;
 }
+
+#ytvl-container {
+  padding-bottom: 20px !important;
+}
+
+.tvl-video-entry {
+  color: orangered;
+}
+
+.tvl-video-entry:hover {
+  color: maroon;
+  text-decoration: none;
+}
