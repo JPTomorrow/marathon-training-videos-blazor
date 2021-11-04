@@ -12,27 +12,30 @@
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>@localizer["TVL_Title"]</th>
-                <th>@localizer["TVL_Description"]</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var v in videos)
-            {
+    <div id="ytvl-container">
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>
-                        <a href="" @onclick="() => GoToVideoPage(v.Title, v.VideoUrl)" @onclick:preventDefault>
-                            @v.Title
-                        </a>
-                    </td>
-                    <td>@v.Description</td>
+                    <th>@localizer["TVL_Title"]</th>
+                    <th>@localizer["TVL_Description"]</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var v in videos)
+                {
+                    <tr>
+                        <td>
+                            <a class="tvl-video-entry" href="" @onclick="() => GoToVideoPage(v.Title, v.VideoUrl)"
+                        @onclick:preventDefault>
+                                @v.Title
+                            </a>
+                        </td>
+                        <td>@v.Description</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 }
 
 @code {

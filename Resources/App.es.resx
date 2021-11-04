@@ -129,8 +129,28 @@
     <value>Sobre</value>
     <comment/>
   </data>
-  <data name="TVL-Title" xml:space="preserve">
+  <data name="TVL_Title" xml:space="preserve">
     <value>Título</value>
+    <comment/>
+  </data>
+  <data name="TVL_Description" xml:space="preserve">
+    <value>Descripción</value>
+    <comment/>
+  </data>
+  <data name="TVP_Instructions" xml:space="preserve">
+    <value>INSTRUCCIONES</value>
+    <comment/>
+  </data>
+  <data name="TVP_Instruction_Steps_P1" xml:space="preserve">
+    <value>Please read carefully and complete all steps in order to ensure that you supervisor is informed that you have watched this video in its entirety.</value>
+    <comment/>
+  </data>
+  <data name="TVP_Instruction_Steps_UL1" xml:space="preserve">
+    <value>Play the video and watch it all the way through, paying close attention as you  will be tested on the material in the video.</value>
+    <comment/>
+  </data>
+  <data name="TVP_Instruction_Steps_UL2" xml:space="preserve">
+    <value>After watching the video all the way to the end. The button below that says 'Go To Test' will becaome clickable. Click on it to begin the test.</value>
     <comment/>
   </data>
 </root>
