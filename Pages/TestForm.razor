@@ -9,9 +9,7 @@
 @inject FormDataService formDataService
 
 <style>
-    .container {
-        margin-left: auto;
-        margin-right: auto;
+    #tf-container {
         width: 100%;
         text-align: left;
     }
@@ -46,30 +44,39 @@
     }
 </style>
 
-<div class="container">
+<div id="tf-container">
     <StandardHeaderOne Underlined="true">Take The Test</StandardHeaderOne>
     <h2 id="tf-test-name">@Title</h2>
     <p id="tf-instructions">Please fill out the following test. When you are done, click the 'Submit' button at the
         bottom of the form.</p>
-    <EditForm model="@Entry">
-        @foreach (var q in Entry.English.Questions)
-        {
-            <h3 id="question-text">@q.Text</h3>
 
-            <input id="answer-a" type="radio" />
-            <label class="tf-label" for="answer-a">A. @q.Answers.A.AnswerText</label>
-            <br />
-            <input id="answer-b" type="radio" />
-            <label class="tf-label" for="answer-b">B. @q.Answers.B.AnswerText</label>
-            <br />
-            <input id="answer-c" type="radio" />
-            <label class="tf-label" for="answer-c">C. @q.Answers.C.AnswerText</label>
-            <br />
-            <input id="answer-d" type="radio" />
-            <label class="tf-label" for="answer-d">D. @q.Answers.D.AnswerText</label>
+    <EditForm model="@Entry">
+        @{
+            int idx = 1;
+            @foreach (var q in Entry.English.Questions)
+            {
+                string group_tag = "radio_grp_" + idx;
+                <h3 id="question-text">@q.Text</h3>
+
+                <InputRadioGroup @bind-Value="q.SelectedAnswer">
+                    <InputRadio id="answer-a" Value="@q.Answers.A.AnswerText" />
+                    <label class="tf-label" for="answer-a">A. @q.Answers.A.AnswerText</label>
+                    <br />
+                    <InputRadio id="answer-b" Value="@q.Answers.B.AnswerText" />
+                    <label class="tf-label" for="answer-b">B. @q.Answers.B.AnswerText</label>
+                    <br />
+                    <InputRadio id="answer-c" Value="@q.Answers.C.AnswerText" />
+                    <label class="tf-label" for="answer-c">C. @q.Answers.C.AnswerText</label>
+                    <br />
+                    <InputRadio id="answer-d" Value="@q.Answers.D.AnswerText" />
+                    <label class="tf-label" for="answer-d">D. @q.Answers.D.AnswerText</label>
+                </InputRadioGroup>
+                idx++;
+            }
         }
         <br />
         <input id="tf-submit-btn" class="btn btn-primary" type="submit" value="Submit">
+        <button class="btn btn-primary" @onclick="Test">Test</button>
     </EditForm>
 </div>
 
@@ -79,6 +86,12 @@
     [Parameter]
     public string FormUrl { get; set; }
     private FormDataEntry Entry { get; set; }
+
+    private async void Test()
+    {
+        var str = string.Join("\n", Entry.English.Questions.Select(q => q.SelectedAnswer));
+        await JSRuntime.InvokeVoidAsync("alert", str);
+    }
 
     protected override void OnParametersSet()
     {

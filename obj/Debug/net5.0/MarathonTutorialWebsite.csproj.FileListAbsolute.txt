@@ -62,8 +62,6 @@ C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug
 C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\RazorDeclaration\Pages\YoutubeVideoList.razor.g.cs
 C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\Razor\Pages\YoutubeVideoList.razor.g.cs
 C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\scopedcss\Pages\YoutubeVideoList.razor.rz.scp.css
-C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\RazorDeclaration\Pages\TutorialVideo.razor.g.cs
-C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\Razor\Pages\TutorialVideo.razor.g.cs
 C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\RazorDeclaration\Shared\ChooseLanguage.razor.g.cs
 C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\Razor\Shared\ChooseLanguage.razor.g.cs
 C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\bin\Debug\net5.0\es\MarathonTutorialWebsite.resources.dll
@@ -149,3 +147,10 @@ D:\Code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\Razor\Pages\TutorialVide
 D:\Code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\RazorDeclaration\Pages\TestForm.razor.g.cs
 D:\Code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\Razor\Pages\TestForm.razor.g.cs
 D:\Code\blazor\MarathonTutorialWebsite\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\RazorDeclaration\Pages\TestForm.razor.g.cs
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\RazorDeclaration\Pages\TutorialVideoPage.razor.g.cs
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\Razor\Pages\TestForm.razor.g.cs
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\Razor\Pages\TutorialVideoPage.razor.g.cs
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\RazorDeclaration\Pages\About.razor.g.cs
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\Razor\Pages\About.razor.g.cs

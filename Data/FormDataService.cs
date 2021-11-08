@@ -21,7 +21,6 @@ namespace MarathonTutorialWebsite.Data
             var json = File.ReadAllText("wwwroot/data/marathon_tests.json");
             var jobj = JObject.Parse(json);
             Entry = jobj[jsonFormName].ToObject<FormDataEntry>();
-
         }
     }
 }

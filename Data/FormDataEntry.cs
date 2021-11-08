@@ -40,6 +40,7 @@ namespace MarathonTutorialWebsite.Data
     {
         public string Text { get; set; }
         public Answers Answers { get; set; }
+        public string SelectedAnswer { get; set; }
     }
 
     public class English

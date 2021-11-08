@@ -13,91 +13,91 @@ namespace MarathonTutorialWebsite.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "D:\Code\blazor\MarathonTutorialWebsite\_Imports.razor"
+#line 1 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\Code\blazor\MarathonTutorialWebsite\_Imports.razor"
+#line 2 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "D:\Code\blazor\MarathonTutorialWebsite\_Imports.razor"
+#line 3 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "D:\Code\blazor\MarathonTutorialWebsite\_Imports.razor"
+#line 4 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "D:\Code\blazor\MarathonTutorialWebsite\_Imports.razor"
+#line 5 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "D:\Code\blazor\MarathonTutorialWebsite\_Imports.razor"
+#line 6 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "D:\Code\blazor\MarathonTutorialWebsite\_Imports.razor"
+#line 7 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "D:\Code\blazor\MarathonTutorialWebsite\_Imports.razor"
+#line 8 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "D:\Code\blazor\MarathonTutorialWebsite\_Imports.razor"
+#line 9 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
 using MarathonTutorialWebsite;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "D:\Code\blazor\MarathonTutorialWebsite\_Imports.razor"
+#line 10 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
 using MarathonTutorialWebsite.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "D:\Code\blazor\MarathonTutorialWebsite\_Imports.razor"
+#line 11 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
 using Microsoft.Extensions.Configuration;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "D:\Code\blazor\MarathonTutorialWebsite\_Imports.razor"
+#line 12 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor"
 using Microsoft.Extensions.Localization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "D:\Code\blazor\MarathonTutorialWebsite\Pages\TestForm.razor"
+#line 8 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TestForm.razor"
 using MarathonTutorialWebsite.Data;
 
 #line default
@@ -113,13 +113,19 @@ using MarathonTutorialWebsite.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 76 "D:\Code\blazor\MarathonTutorialWebsite\Pages\TestForm.razor"
+#line 83 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TestForm.razor"
             
     [Parameter]
     public string Title { get; set; }
     [Parameter]
     public string FormUrl { get; set; }
     private FormDataEntry Entry { get; set; }
+
+    private async void Test()
+    {
+        var str = string.Join("\n", Entry.English.Questions.Select(q => q.SelectedAnswer));
+        await JSRuntime.InvokeVoidAsync("alert", str);
+    }
 
     protected override void OnParametersSet()
     {

@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\MarathonTutorialWebsite.csproj",
+  "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\MarathonTutorialWebsite.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -12,35 +12,35 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 630942073,
+        "HashCode": 725806217,
         "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Pages.Index",
+        "Name": "MarathonTutorialWebsite.Pages.Counter",
         "AssemblyName": "MarathonTutorialWebsite",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Index"
+            "TagName": "Counter"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Pages.Index"
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.Counter"
         }
       },
       {
-        "HashCode": -1506893890,
+        "HashCode": 1113206940,
         "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Pages.Index",
+        "Name": "MarathonTutorialWebsite.Pages.Counter",
         "AssemblyName": "MarathonTutorialWebsite",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "MarathonTutorialWebsite.Pages.Index"
+            "TagName": "MarathonTutorialWebsite.Pages.Counter"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Pages.Index",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.Counter",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -186,35 +186,101 @@
         }
       },
       {
-        "HashCode": 725806217,
+        "HashCode": 630942073,
         "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Pages.Counter",
+        "Name": "MarathonTutorialWebsite.Pages.Index",
         "AssemblyName": "MarathonTutorialWebsite",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Counter"
+            "TagName": "Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Pages.Counter"
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.Index"
         }
       },
       {
-        "HashCode": 1113206940,
+        "HashCode": -1506893890,
         "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Pages.Counter",
+        "Name": "MarathonTutorialWebsite.Pages.Index",
         "AssemblyName": "MarathonTutorialWebsite",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "MarathonTutorialWebsite.Pages.Counter"
+            "TagName": "MarathonTutorialWebsite.Pages.Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Pages.Counter",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1314763196,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Pages.YoutubeVideoList",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "YoutubeVideoList"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.YoutubeVideoList"
+        }
+      },
+      {
+        "HashCode": -493740319,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Pages.YoutubeVideoList",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MarathonTutorialWebsite.Pages.YoutubeVideoList"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.YoutubeVideoList",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1071624397,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Pages.About",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "About"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.About"
+        }
+      },
+      {
+        "HashCode": -1326080327,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Pages.About",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MarathonTutorialWebsite.Pages.About"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.About",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -300,39 +366,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "MarathonTutorialWebsite.Pages.TutorialVideoPage",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1314763196,
-        "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Pages.YoutubeVideoList",
-        "AssemblyName": "MarathonTutorialWebsite",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "YoutubeVideoList"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Pages.YoutubeVideoList"
-        }
-      },
-      {
-        "HashCode": -493740319,
-        "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Pages.YoutubeVideoList",
-        "AssemblyName": "MarathonTutorialWebsite",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "MarathonTutorialWebsite.Pages.YoutubeVideoList"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Pages.YoutubeVideoList",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16261,78 +16294,83 @@
   "RootNamespace": "MarathonTutorialWebsite",
   "Documents": [
     {
-      "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\Shared\\ChooseLanguage.razor",
-      "TargetPath": "Shared\\ChooseLanguage.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\Pages\\FetchData.razor",
-      "TargetPath": "Pages\\FetchData.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\Pages\\Error.cshtml",
-      "TargetPath": "Pages\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\App.razor",
-      "TargetPath": "App.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\Shared\\SurveyPrompt.razor",
-      "TargetPath": "Shared\\SurveyPrompt.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\Pages\\_Host.cshtml",
-      "TargetPath": "Pages\\_Host.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\_Imports.razor",
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\_Imports.razor",
       "TargetPath": "_Imports.razor",
       "FileKind": "componentImport"
     },
     {
-      "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\Pages\\TutorialVideoPage.razor",
-      "TargetPath": "Pages\\TutorialVideoPage.razor",
-      "FileKind": "component"
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Pages\\_Host.cshtml",
+      "TargetPath": "Pages\\_Host.cshtml",
+      "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\Pages\\StandardHeaderOne.razor",
-      "TargetPath": "Pages\\StandardHeaderOne.razor",
-      "FileKind": "component"
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Pages\\Error.cshtml",
+      "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\Pages\\TestForm.razor",
-      "TargetPath": "Pages\\TestForm.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\Pages\\Index.razor",
-      "TargetPath": "Pages\\Index.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\Pages\\YoutubeVideoList.razor",
-      "TargetPath": "Pages\\YoutubeVideoList.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\Pages\\Counter.razor",
-      "TargetPath": "Pages\\Counter.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\Shared\\NavMenu.razor",
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Shared\\NavMenu.razor",
       "TargetPath": "Shared\\NavMenu.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "d:\\Code\\blazor\\MarathonTutorialWebsite\\Shared\\MainLayout.razor",
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Shared\\MainLayout.razor",
       "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Shared\\SurveyPrompt.razor",
+      "TargetPath": "Shared\\SurveyPrompt.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Pages\\Index.razor",
+      "TargetPath": "Pages\\Index.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Pages\\FetchData.razor",
+      "TargetPath": "Pages\\FetchData.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Pages\\StandardHeaderOne.razor",
+      "TargetPath": "Pages\\StandardHeaderOne.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Pages\\Counter.razor",
+      "TargetPath": "Pages\\Counter.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Pages\\TestForm.razor",
+      "TargetPath": "Pages\\TestForm.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Pages\\About.razor",
+      "TargetPath": "Pages\\About.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Shared\\ChooseLanguage.razor",
+      "TargetPath": "Shared\\ChooseLanguage.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Pages\\YoutubeVideoList.razor",
+      "TargetPath": "Pages\\YoutubeVideoList.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\Pages\\TutorialVideoPage.razor",
+      "TargetPath": "Pages\\TutorialVideoPage.razor",
       "FileKind": "component"
     }
   ],

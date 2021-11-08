@@ -1,5 +1,6 @@
 @inherits LayoutComponentBase
 @inject IStringLocalizer<App> localizer
+@inject NavigationManager navigationManager
 
 <style>
     .nav-links a {
@@ -17,8 +18,10 @@
         <div class="top-row px-4">
             <img src="/assets/logo.png" alt="logo" class="logo" />
             <ul class="nav-links">
-                <li><a href="https://docs.microsoft.com/aspnet/" target="_blank">@localizer["Training Videos"]</a></li>
-                <li><a href="https://docs.microsoft.com/aspnet/" target="_blank">@localizer["About"]</a></li>
+                <li><a href="https://docs.microsoft.com/aspnet/" @onclick="@GoToTrainingVids"
+                        @onclick:preventDefault>@localizer["Training Videos"]</a></li>
+                <li><a href="https://docs.microsoft.com/aspnet/" @onclick="@GoToAbout"
+                        @onclick:preventDefault>@localizer["About"]</a></li>
             </ul>
             <ChooseLanguage />
         </div>
@@ -28,3 +31,15 @@
         </div>
     </div>
 </div>
+
+@code {
+    private void GoToTrainingVids()
+    {
+        navigationManager.NavigateTo("/");
+    }
+
+    private void GoToAbout()
+    {
+        navigationManager.NavigateTo("/about");
+    }
+}

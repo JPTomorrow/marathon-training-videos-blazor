@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Y3+wL3KwQ6lzM+UutSqq1lh33a+1AWDB9JVRns4LhwgoOlucra0mDa71qguRWuK/NFAhg8d816QLlE9rgF0b7w==",
+  "dgSpecHash": "2IA7qv5S3MnGeZw/HbVziW6cRr3v9iLZW5k6OVUDh8Hikxg8w+z3m7Q2TBBUroMiyj903oiBNLT8zw9QeTvCUQ==",
   "success": true,
-  "projectFilePath": "D:\\Code\\blazor\\MarathonTutorialWebsite\\MarathonTutorialWebsite.csproj",
+  "projectFilePath": "C:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\MarathonTutorialWebsite.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\justi\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\Jmorrow\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }
