@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\MarathonTutorialWebsite.csproj": {}
+    "D:\\Code\\blazor\\MarathonTutorialWebsite\\MarathonTutorialWebsite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\MarathonTutorialWebsite.csproj": {
+    "D:\\Code\\blazor\\MarathonTutorialWebsite\\MarathonTutorialWebsite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\MarathonTutorialWebsite.csproj",
+        "projectUniqueName": "D:\\Code\\blazor\\MarathonTutorialWebsite\\MarathonTutorialWebsite.csproj",
         "projectName": "MarathonTutorialWebsite",
-        "projectPath": "C:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\MarathonTutorialWebsite.csproj",
-        "packagesPath": "C:\\Users\\Jmorrow\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jmorrow\\Desktop\\code\\work-code\\blazor\\MarathonTutorialWebsite\\obj\\",
+        "projectPath": "D:\\Code\\blazor\\MarathonTutorialWebsite\\MarathonTutorialWebsite.csproj",
+        "packagesPath": "C:\\Users\\justi\\.nuget\\packages\\",
+        "outputPath": "D:\\Code\\blazor\\MarathonTutorialWebsite\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jmorrow\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\justi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,6 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\ProgramData\\Autodesk\\Revit\\Macros\\2018\\Revit\\AppHookup\\ScriptUpdater\\Source\\ScriptUpdater\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,6 +43,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -60,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

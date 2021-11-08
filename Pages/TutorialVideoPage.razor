@@ -1,7 +1,10 @@
 @page "/tutorial_video"
 @page "/tutorial_video/{title}/{url}"
+@page "/tutorial_video/{title}/{url}/{formurl}"
+@using System.Text.Encodings.Web
 @inject IStringLocalizer<App> localizer
 @inject IJSRuntime JSRuntime
+@inject NavigationManager navigationManager
 
 <style>
     h1 {
@@ -40,7 +43,6 @@
 
     #tvp-instructions {
         color: ghostwhite;
-
     }
 
     #tvp-instructions li {
@@ -66,7 +68,7 @@
     <h1 id="title">@Title</h1>
 
     <div class="fluidMedia">
-        <iframe @onload="IFrameLoaded" id="tvp-video" src="@Url?autoplay=0&showinfo=0&controls=1&modestbranding=1" />
+        <iframe id="tvp-video" src="@Url?autoplay=0&showinfo=0&controls=0&modestbranding=1&rel=0&enablejsapi=1" />
     </div>
 
     <div class="description">
@@ -76,7 +78,8 @@
             <li>@localizer["TVP_Instruction_Steps_UL1"]</li>
             <li>@localizer["TVP_Instruction_Steps_UL2"]</li>
         </ol>
-        <button id="tvp-test-btn" type="button" class="btn btn-primary" disabled>@localizer["TVP_Test_Button"]</button>
+        <button id="tvp-test-btn" type="button" class="btn btn-primary"
+            @onclick="GoToTest">@localizer["TVP_Test_Button"]</button>
     </div>
 </div>
 
@@ -85,18 +88,24 @@
     public string Title { get; set; }
     [Parameter]
     public string Url { get; set; }
+    [Parameter]
+    public string FormUrl { get; set; }
 
-    public async Task IFrameLoaded(ProgressEventArgs e)
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        await JSRuntime.InvokeVoidAsync("thisAppFunctions.EnableTestFormButton", null);
+        await JSRuntime.InvokeVoidAsync("thisAppFunctions.SetupTutorialYTVideo", "tvp-video", "tvp-test-btn");
     }
 
     protected override void OnParametersSet()
     {
         Title = Title ?? "";
         Url = Url ?? "";
+        FormUrl = FormUrl ?? "";
+    }
 
-        /*var prompt = Url;
-        JSRuntime.InvokeVoidAsync("alert", prompt); */
+    private void GoToTest()
+    {
+        var url = "/test_form/" + Title + "/" + UrlEncoder.Create().Encode(FormUrl);
+        navigationManager.NavigateTo(url);
     }
 }

@@ -1,0 +1,175 @@
+/* _content/MarathonTutorialWebsite/Pages/Index.razor.rz.scp.css */
+/* _content/MarathonTutorialWebsite/Pages/YoutubeVideoList.razor.rz.scp.css */
+th[b-c9tz53hqp8] {
+  color: ghostwhite;
+}
+
+tr[b-c9tz53hqp8] {
+  color: ghostwhite;
+}
+
+#ytvl-container[b-c9tz53hqp8] {
+  padding-bottom: 20px !important;
+}
+
+.tvl-video-entry[b-c9tz53hqp8] {
+  color: orangered;
+}
+
+.tvl-video-entry:hover[b-c9tz53hqp8] {
+  color: maroon;
+  text-decoration: none;
+}
+/* _content/MarathonTutorialWebsite/Shared/MainLayout.razor.rz.scp.css */
+.page[b-x4x6nkc4tw] {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.main[b-x4x6nkc4tw] {
+  flex: 1;
+}
+
+.sidebar[b-x4x6nkc4tw] {
+  background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-x4x6nkc4tw] {
+  background-color: #1b1b1b;
+  border-bottom: 1px solid #d6d5d5;
+  justify-content: flex-start;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.top-row a:first-child[b-x4x6nkc4tw] {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logo[b-x4x6nkc4tw] {
+  width: 70px;
+}
+
+.nav-links[b-x4x6nkc4tw] {
+  padding-top: 15px;
+}
+
+.nav-links li[b-x4x6nkc4tw] {
+  display: inline;
+  white-space: nowrap;
+  margin-left: 1.5rem;
+}
+
+.container-type-one[b-x4x6nkc4tw] {
+  background-color: rgb(24, 24, 24);
+  width: 95%;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+}
+
+@media (max-width: 640.98px) {
+  .top-row:not(.auth)[b-x4x6nkc4tw] {
+    display: none;
+  }
+
+  .top-row.auth[b-x4x6nkc4tw] {
+    justify-content: space-between;
+  }
+
+  .top-row a[b-x4x6nkc4tw],
+  .top-row .btn-link[b-x4x6nkc4tw] {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 641px) {
+  .page[b-x4x6nkc4tw] {
+    flex-direction: row;
+  }
+
+  .sidebar[b-x4x6nkc4tw] {
+    width: 250px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+  }
+
+  .top-row[b-x4x6nkc4tw] {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .main > div[b-x4x6nkc4tw] {
+    padding-left: 2rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+/* _content/MarathonTutorialWebsite/Shared/NavMenu.razor.rz.scp.css */
+.navbar-toggler[b-6pja8xs7jg] {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-row[b-6pja8xs7jg] {
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-brand[b-6pja8xs7jg] {
+    font-size: 1.1rem;
+}
+
+.oi[b-6pja8xs7jg] {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}
+
+.nav-item[b-6pja8xs7jg] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-6pja8xs7jg] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-6pja8xs7jg] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-6pja8xs7jg]  a {
+        color: #d7d7d7;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+.nav-item[b-6pja8xs7jg]  a.active {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+}
+
+.nav-item[b-6pja8xs7jg]  a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-6pja8xs7jg] {
+        display: none;
+    }
+
+    .collapse[b-6pja8xs7jg] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+}

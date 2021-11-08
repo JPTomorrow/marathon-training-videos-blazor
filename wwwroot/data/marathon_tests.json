@@ -1,0 +1,96 @@
+{
+    "New Hire Test 01": {
+        "English": {
+            "Questions": [ 
+                {
+                    "Text": "How much wood does a wood chuck chuck?",
+                    "Answers": {
+                        "A": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": false
+                        },
+                        "B": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": false
+                        },
+                        "C": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": true
+                        },
+                        "D": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": false
+                        }
+                    }
+                },
+                {
+                    "Text": "How much wood does a wood chuck chuck 2?",
+                    "Answers": {
+                        "A": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": false
+                        },
+                        "B": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": false
+                        },
+                        "C": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": true
+                        },
+                        "D": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": false
+                        }
+                    }
+                } 
+            ]
+        },
+        "Spanish": {
+            "Questions": [ 
+                {
+                    "Text": "How much wood does a wood chuck chuck?",
+                    "Answers": {
+                        "A": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": false
+                        },
+                        "B": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": false
+                        },
+                        "C": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": true
+                        },
+                        "D": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": false
+                        }
+                    }
+                },
+                {
+                    "Text": "How much wood does a wood chuck chuck 2?",
+                    "Answers": {
+                        "A": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": false
+                        },
+                        "B": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": false
+                        },
+                        "C": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": true
+                        },
+                        "D": {
+                            "AnswerText": "poop1",
+                            "IsCorrect": false
+                        }
+                    }
+                } 
+            ]
+        }
+    }
+}

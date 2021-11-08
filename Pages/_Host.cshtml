@@ -33,22 +33,41 @@
     </div>
 
     <script src="_framework/blazor.server.js"></script>
-    <script src="http://www.youtube.com/player_api"></script>
+
+
+    <!-- TODO - This code should be in TutorialVideo.razor but if cant be because of js fuckyness. Check back in the future if there is a solution to this and do it. -->
+    <script src="https://www.youtube.com/player_api"></script>
+    <script src="https://www.cognitoforms.com/f/iframe.js"></script>
+    <script>Cognito.setCss('.cognito {float: left;}');</script>
 
     <!-- TODO - This code should be in TutorialVideo.razor but if cant be because of js fuckyness. Check back in the future if there is a solution to this and do it. -->
     <script>
         window.thisAppFunctions =
         {
             EnableTestFormButton: function () {
-                alert("setting handle");
+
                 var video = document.getElementById("tvp-video");
                 var button = document.getElementById("tvp-test-btn");
 
-                video.addEventListener("ended", function () {
-                    alert("enabling video");
-                    button.disabled = false;
-                }, true);
-
+                video.addEventListener("onStateChange", function (state) {
+                    if (state === 0) {
+                        alert("enabling video");
+                        button.disabled = false;
+                    }
+                });
+            },
+            SetupTutorialYTVideo: function (video_id, button_id) {
+                var player;
+                player = new YT.Player(video_id, {
+                    events: {
+                        'onStateChange': function (e) {
+                            var button = document.getElementById(button_id);
+                            if (e.data === 0) {
+                                button.disabled = false;
+                            }
+                        }
+                    }
+                });
             }
         }
     </script>

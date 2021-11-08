@@ -1,0 +1,30 @@
+{
+    "New Hire Test 01": {
+        "English": {
+            "Questions": {
+                "Question": {
+                    "Text": "How much wood does a wood chuck chuck?",
+                    "Answers":{
+                        "A": "poop1",
+                        "B": "poop2",
+                        "C": "poop3",
+                        "D": "poop4"
+                    }
+                }
+            }
+        },
+        "Spanish": {
+            "Questions": {
+                "Question": {
+                    "Text": "How much wood does a wood chuck chuck?",
+                    "Answers":{
+                        "A": "poop1",
+                        "B": "poop2",
+                        "C": "poop3",
+                        "D": "poop4"
+                    }
+                }
+            }
+        }
+    }
+}

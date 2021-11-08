@@ -1,0 +1,90 @@
+@page "/test_form"
+@page "/test_form/{title}/{formurl}"
+
+@inject IStringLocalizer<App> localizer
+@inject IJSRuntime JSRuntime
+@inject NavigationManager navigationManager
+
+@using MarathonTutorialWebsite.Data
+@inject FormDataService formDataService
+
+<style>
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        text-align: left;
+    }
+
+    #tf-test-name {
+        color: ghostwhite;
+    }
+
+    #tf-instructions {
+        color: ghostwhite;
+    }
+
+    #question-text {
+        color: ghostwhite;
+    }
+
+    .tf-label {
+        color: ghostwhite;
+    }
+
+    #tf-submit-btn {
+        background-color: transparent;
+        border: 1px solid orangered;
+        color: orangered;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    #tf-submit-btn:hover {
+        background-color: orangered;
+        color: ghostwhite;
+    }
+</style>
+
+<div class="container">
+    <StandardHeaderOne Underlined="true">Take The Test</StandardHeaderOne>
+    <h2 id="tf-test-name">@Title</h2>
+    <p id="tf-instructions">Please fill out the following test. When you are done, click the 'Submit' button at the
+        bottom of the form.</p>
+    <EditForm model="@Entry">
+        @foreach (var q in Entry.English.Questions)
+        {
+            <h3 id="question-text">@q.Text</h3>
+
+            <input id="answer-a" type="radio" />
+            <label class="tf-label" for="answer-a">A. @q.Answers.A.AnswerText</label>
+            <br />
+            <input id="answer-b" type="radio" />
+            <label class="tf-label" for="answer-b">B. @q.Answers.B.AnswerText</label>
+            <br />
+            <input id="answer-c" type="radio" />
+            <label class="tf-label" for="answer-c">C. @q.Answers.C.AnswerText</label>
+            <br />
+            <input id="answer-d" type="radio" />
+            <label class="tf-label" for="answer-d">D. @q.Answers.D.AnswerText</label>
+        }
+        <br />
+        <input id="tf-submit-btn" class="btn btn-primary" type="submit" value="Submit">
+    </EditForm>
+</div>
+
+@functions {
+    [Parameter]
+    public string Title { get; set; }
+    [Parameter]
+    public string FormUrl { get; set; }
+    private FormDataEntry Entry { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        Title = Title ?? "";
+        FormUrl = FormUrl ?? "";
+        formDataService.LoadFormDataFromJson(Title);
+        Entry = formDataService.Entry;
+    }
+}

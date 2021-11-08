@@ -32,6 +32,7 @@ namespace MarathonTutorialWebsite
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<YoutubeVideoService>();
+            services.AddSingleton<FormDataService>();
         }
 
         private RequestLocalizationOptions GetLocalizationOptions()
