@@ -37,8 +37,6 @@
 
     <!-- TODO - This code should be in TutorialVideo.razor but if cant be because of js fuckyness. Check back in the future if there is a solution to this and do it. -->
     <script src="https://www.youtube.com/player_api"></script>
-    <script src="https://www.cognitoforms.com/f/iframe.js"></script>
-    <script>Cognito.setCss('.cognito {float: left;}');</script>
 
     <!-- TODO - This code should be in TutorialVideo.razor but if cant be because of js fuckyness. Check back in the future if there is a solution to this and do it. -->
     <script>
@@ -68,6 +66,9 @@
                         }
                     }
                 });
+            },
+            HistoryGoBack: function () {
+                window.history.go(-1);
             }
         }
     </script>

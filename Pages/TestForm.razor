@@ -6,6 +6,8 @@
 @inject NavigationManager navigationManager
 
 @using MarathonTutorialWebsite.Data
+@using System.Globalization
+@using System.Net.Mail
 @inject FormDataService formDataService
 
 <style>
@@ -19,10 +21,6 @@
     }
 
     #tf-instructions {
-        color: ghostwhite;
-    }
-
-    #question-text {
         color: ghostwhite;
     }
 
@@ -42,6 +40,73 @@
         background-color: orangered;
         color: ghostwhite;
     }
+
+    #tf-edit-form {
+        margin-top: 45px;
+    }
+
+    .tf-question-text {
+        color: ghostwhite;
+        margin-top: 25px;
+        font-size: 14pt;
+    }
+
+    .tf-label {
+        color: ghostwhite;
+    }
+
+    .tf-submitted-container-bg {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.7);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    .tf-submitted-container {
+        color: ghostwhite;
+        background-color: rgb(24, 24, 24);
+        border-radius: 20px;
+        border: 1px solid orangered;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        margin-top: 350px;
+        padding: 25px;
+    }
+
+    .tf-passed-header {
+        padding-bottom: 25px;
+    }
+
+    #tf-rewatch-vid-btn {
+        background-color: transparent;
+        border: 1px solid orangered;
+        color: orangered;
+        margin-top: 25px;
+    }
+
+    #tf-rewatch-vid-btn:hover {
+        background-color: orangered;
+        color: ghostwhite;
+    }
+
+    #tf-video-list-btn {
+        background-color: transparent;
+        border: 1px solid orangered;
+        color: orangered;
+        margin-top: 25px;
+    }
+
+    #tf-video-list-btn:hover {
+        background-color: orangered;
+        color: ghostwhite;
+    }
+
+    #tf-submitted-code {
+        margin-top: 25px;
+    }
 </style>
 
 <div id="tf-container">
@@ -50,48 +115,99 @@
     <p id="tf-instructions">Please fill out the following test. When you are done, click the 'Submit' button at the
         bottom of the form.</p>
 
-    <EditForm model="@Entry">
-        @{
-            int idx = 1;
-            @foreach (var q in Entry.English.Questions)
-            {
-                string group_tag = "radio_grp_" + idx;
-                <h3 id="question-text">@q.Text</h3>
+    <EditForm class="tf-edit-form" model="@Entry">
+        <label class="tf-label" for="tf-full-name">Full Name</label>
+        <InputText id="tf-full-name" @bind-Value="Entry.FullName" />
+    </EditForm>
 
-                <InputRadioGroup @bind-Value="q.SelectedAnswer">
-                    <InputRadio id="answer-a" Value="@q.Answers.A.AnswerText" />
-                    <label class="tf-label" for="answer-a">A. @q.Answers.A.AnswerText</label>
-                    <br />
-                    <InputRadio id="answer-b" Value="@q.Answers.B.AnswerText" />
-                    <label class="tf-label" for="answer-b">B. @q.Answers.B.AnswerText</label>
-                    <br />
-                    <InputRadio id="answer-c" Value="@q.Answers.C.AnswerText" />
-                    <label class="tf-label" for="answer-c">C. @q.Answers.C.AnswerText</label>
-                    <br />
-                    <InputRadio id="answer-d" Value="@q.Answers.D.AnswerText" />
-                    <label class="tf-label" for="answer-d">D. @q.Answers.D.AnswerText</label>
-                </InputRadioGroup>
-                idx++;
-            }
+    <EditForm class="tf-edit-form" model="@Entry">
+        <label class="tf-label" for="tf-email">Email Address</label>
+        <InputText id="tf-email" @bind-Value="Entry.EmailAddress" />
+    </EditForm>
+
+    <EditForm class="tf-edit-form" model="@Questions" OnValidSubmit="SubmitForm">
+
+        @foreach (var q in Questions)
+        {
+            <h3 class="tf-question-text">@q.Text</h3>
+
+            <InputRadioGroup @bind-Value="q.SelectedAnswer">
+                @if (q.Answers.A != null)
+                {
+                <InputRadio id="answer-a" Value="@q.Answers.A.AnswerText" />
+                <label class="tf-label" for="answer-a">A. @q.Answers.A.AnswerText</label>
+                }
+
+            @if (q.Answers.B != null)
+                {
+                <br />
+                <InputRadio id="answer-b" Value="@q.Answers.B.AnswerText" />
+                <label class="tf-label" for="answer-b">B. @q.Answers.B.AnswerText</label>
+                }
+
+            @if (q.Answers.C != null)
+                {
+                <br />
+                <InputRadio id="answer-c" Value="@q.Answers.C.AnswerText" />
+                <label class="tf-label" for="answer-c">C. @q.Answers.C.AnswerText</label>
+                }
+
+            @if (q.Answers.D != null)
+                {
+                <br />
+                <InputRadio id="answer-d" Value="@q.Answers.D.AnswerText" />
+                <label class="tf-label" for="answer-d">D. @q.Answers.D.AnswerText</label>
+                }
+        </InputRadioGroup>
         }
         <br />
         <input id="tf-submit-btn" class="btn btn-primary" type="submit" value="Submit">
-        <button class="btn btn-primary" @onclick="Test">Test</button>
     </EditForm>
 </div>
 
-@functions {
+@if (isSubmitted)
+{
+    <div class="tf-submitted-container-bg">
+        <div class="tf-submitted-container">
+            @if (isPassed)
+            {
+                <h1 class="tf-passed-header">Congratulations! <font color="green">You Passed!</font>
+                </h1>
+                <p class="tf-submitted-score">Score: @totalCorrect / @totalPossible -> @Percentage%</p>
+                <h2 class="tf-passed-header-2">Copy the code below and turn it into your supervisor for them to confirm that you
+                    completed the test. DO NOT navigate away from this page without writing down the code or else you will have
+                    to watch the video and complete the test again to get another code.</h2>
+                <h2 id="tf-submitted-code">Code: <font color="green">@UniqueCode</font>
+                </h2>
+                <button id="tf-video-list-btn" class="btn btn-primary" @onclick="GoToVideoList">Return to training
+                    videos</button>
+            }
+            else
+            {
+                <h1 class="tf-passed-header">Sorry, <font color="red">you failed the test.</font>
+                </h1>
+                <p class="tf-submitted-score">Score: @totalCorrect / @totalPossible -> @Percentage%</p>
+                <h2 class="tf-passed-header-2">Please rewatch the video all the way through and retake the test. 70%+ is a
+                    passing grade.</h2>
+                <button id="tf-rewatch-vid-btn" class="btn btn-primary" @onclick="GoToVideo">Go back to video</button>
+            }
+        </div>
+    </div>
+}
+
+@code {
     [Parameter]
     public string Title { get; set; }
     [Parameter]
     public string FormUrl { get; set; }
+    private List<Question> Questions { get; set; }
     private FormDataEntry Entry { get; set; }
-
-    private async void Test()
-    {
-        var str = string.Join("\n", Entry.English.Questions.Select(q => q.SelectedAnswer));
-        await JSRuntime.InvokeVoidAsync("alert", str);
-    }
+    private bool isSubmitted { get; set; } = false;
+    private bool isPassed { get; set; } = false;
+    private int totalPossible { get => Questions.Count; }
+    private int totalCorrect { get; set; } = 0;
+    private int Percentage { get; set; } = 0;
+    private string UniqueCode { get; set; }
 
     protected override void OnParametersSet()
     {
@@ -99,5 +215,110 @@
         FormUrl = FormUrl ?? "";
         formDataService.LoadFormDataFromJson(Title);
         Entry = formDataService.Entry;
+
+        var selected_language = CultureInfo.CurrentCulture.Name;
+        if (selected_language == "en-US")
+        {
+            Questions = formDataService.Entry.English.Questions;
+        }
+        else if (selected_language == "es-ES")
+        {
+            Questions = formDataService.Entry.English.Questions;
+        }
+    }
+
+    private async void GoToVideo()
+    {
+        await JSRuntime.InvokeVoidAsync("thisAppFunctions.HistoryGoBack", null);
+    }
+
+    private void GoToVideoList()
+    {
+        navigationManager.NavigateTo("/");
+    }
+
+    public void SubmitForm()
+    {
+        isSubmitted = true;
+        CalculateScore();
+
+        // if (Percentage >= 70)
+        // SendEmail();
+    }
+
+    private void CalculateScore()
+    {
+        foreach (var q in Questions)
+        {
+            if (q.SelectedAnswer == null) continue;
+
+            if (q.Answers.A == null) continue;
+            if (q.Answers.A.IsCorrect && q.SelectedAnswer.Equals(q.Answers.A.AnswerText))
+            {
+                totalCorrect++;
+                continue;
+            }
+
+            if (q.Answers.B == null) continue;
+            if (q.Answers.B.IsCorrect && q.SelectedAnswer.Equals(q.Answers.B.AnswerText))
+            {
+                totalCorrect++;
+                continue;
+            }
+
+            if (q.Answers.C == null) continue;
+            if (q.Answers.C.IsCorrect && q.SelectedAnswer.Equals(q.Answers.C.AnswerText))
+            {
+                totalCorrect++;
+                continue;
+            }
+
+            if (q.Answers.D == null) continue;
+            if (q.Answers.D.IsCorrect && q.SelectedAnswer.Equals(q.Answers.D.AnswerText))
+            {
+                totalCorrect++;
+                continue;
+            }
+        }
+
+        Percentage = (int)Math.Round(((float)totalCorrect / (float)totalPossible) * 100.0);
+
+        if (Percentage >= 70)
+        {
+            isPassed = true;
+            UniqueCode = RandomString(6);
+        }
+
+    }
+
+    public static string RandomString(int length)
+    {
+        Random random = new Random();
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        return new string(Enumerable.Repeat(chars, length)
+        .Select(s => s[random.Next(s.Length)]).ToArray());
+    }
+
+    private void SendEmail()
+    {
+        var txt = "This is a test email";
+
+        MailMessage msg = new MailMessage();
+        SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+        client.UseDefaultCredentials = false;
+        var creds = new System.Net.NetworkCredential();
+        creds.UserName = "justin.parker.morrow@gmail.com";
+        creds.Password = @"";
+        client.Credentials = creds;
+        msg.From = new MailAddress("justin.parker.morrow@gmail.com");
+        msg.To.Add("justin.parker.morrow@gmail.com");
+        msg.Subject = "Test";
+        msg.Body = txt;
+        client.Send(msg);
+    }
+
+    private void Test(string text)
+    {
+        JSRuntime.InvokeVoidAsync("alert", text);
     }
 }

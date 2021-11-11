@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Text.Json;
+using Newtonsoft.Json;
 
 namespace MarathonTutorialWebsite.Data
 {
@@ -30,10 +32,10 @@ namespace MarathonTutorialWebsite.Data
 
     public class Answers
     {
-        public A A { get; set; }
-        public B B { get; set; }
-        public C C { get; set; }
-        public D D { get; set; }
+        public A A { get; set; } = null;
+        public B B { get; set; } = null;
+        public C C { get; set; } = null;
+        public D D { get; set; } = null;
     }
 
     public class Question
@@ -41,6 +43,11 @@ namespace MarathonTutorialWebsite.Data
         public string Text { get; set; }
         public Answers Answers { get; set; }
         public string SelectedAnswer { get; set; }
+
+        public override string ToString()
+        {
+            return JsonConvert.SerializeObject(this, Formatting.Indented);
+        }
     }
 
     public class English
@@ -55,7 +62,19 @@ namespace MarathonTutorialWebsite.Data
 
     public class FormDataEntry
     {
+        [Required]
+        [StringLength(50)]
+        public string FullName { get; set; } = string.Empty;
+        [Required]
+        [EmailAddress]
+        public string EmailAddress { get; set; } = string.Empty;
+
         public English English { get; set; }
         public Spanish Spanish { get; set; }
+
+        public override string ToString()
+        {
+            return JsonConvert.SerializeObject(this, Formatting.Indented);
+        }
     }
 }

@@ -103,6 +103,20 @@ using MarathonTutorialWebsite.Data;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 9 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TestForm.razor"
+using System.Globalization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TestForm.razor"
+using System.Net.Mail;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/test_form")]
     [Microsoft.AspNetCore.Components.RouteAttribute("/test_form/{title}/{formurl}")]
     public partial class TestForm : Microsoft.AspNetCore.Components.ComponentBase
@@ -113,19 +127,20 @@ using MarathonTutorialWebsite.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 83 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TestForm.razor"
-            
+#line 198 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TestForm.razor"
+       
     [Parameter]
     public string Title { get; set; }
     [Parameter]
     public string FormUrl { get; set; }
+    private List<Question> Questions { get; set; }
     private FormDataEntry Entry { get; set; }
-
-    private async void Test()
-    {
-        var str = string.Join("\n", Entry.English.Questions.Select(q => q.SelectedAnswer));
-        await JSRuntime.InvokeVoidAsync("alert", str);
-    }
+    private bool isSubmitted { get; set; } = false;
+    private bool isPassed { get; set; } = false;
+    private int totalPossible { get => Questions.Count; }
+    private int totalCorrect { get; set; } = 0;
+    private int Percentage { get; set; } = 0;
+    private string UniqueCode { get; set; }
 
     protected override void OnParametersSet()
     {
@@ -133,6 +148,111 @@ using MarathonTutorialWebsite.Data;
         FormUrl = FormUrl ?? "";
         formDataService.LoadFormDataFromJson(Title);
         Entry = formDataService.Entry;
+
+        var selected_language = CultureInfo.CurrentCulture.Name;
+        if (selected_language == "en-US")
+        {
+            Questions = formDataService.Entry.English.Questions;
+        }
+        else if (selected_language == "es-ES")
+        {
+            Questions = formDataService.Entry.English.Questions;
+        }
+    }
+
+    private async void GoToVideo()
+    {
+        await JSRuntime.InvokeVoidAsync("thisAppFunctions.HistoryGoBack", null);
+    }
+
+    private void GoToVideoList()
+    {
+        navigationManager.NavigateTo("/");
+    }
+
+    public void SubmitForm()
+    {
+        isSubmitted = true;
+        CalculateScore();
+
+        // if (Percentage >= 70)
+        // SendEmail();
+    }
+
+    private void CalculateScore()
+    {
+        foreach (var q in Questions)
+        {
+            if (q.SelectedAnswer == null) continue;
+
+            if (q.Answers.A == null) continue;
+            if (q.Answers.A.IsCorrect && q.SelectedAnswer.Equals(q.Answers.A.AnswerText))
+            {
+                totalCorrect++;
+                continue;
+            }
+
+            if (q.Answers.B == null) continue;
+            if (q.Answers.B.IsCorrect && q.SelectedAnswer.Equals(q.Answers.B.AnswerText))
+            {
+                totalCorrect++;
+                continue;
+            }
+
+            if (q.Answers.C == null) continue;
+            if (q.Answers.C.IsCorrect && q.SelectedAnswer.Equals(q.Answers.C.AnswerText))
+            {
+                totalCorrect++;
+                continue;
+            }
+
+            if (q.Answers.D == null) continue;
+            if (q.Answers.D.IsCorrect && q.SelectedAnswer.Equals(q.Answers.D.AnswerText))
+            {
+                totalCorrect++;
+                continue;
+            }
+        }
+
+        Percentage = (int)Math.Round(((float)totalCorrect / (float)totalPossible) * 100.0);
+
+        if (Percentage >= 70)
+        {
+            isPassed = true;
+            UniqueCode = RandomString(6);
+        }
+
+    }
+
+    public static string RandomString(int length)
+    {
+        Random random = new Random();
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        return new string(Enumerable.Repeat(chars, length)
+        .Select(s => s[random.Next(s.Length)]).ToArray());
+    }
+
+    private void SendEmail()
+    {
+        var txt = "This is a test email";
+
+        MailMessage msg = new MailMessage();
+        SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+        client.UseDefaultCredentials = false;
+        var creds = new System.Net.NetworkCredential();
+        creds.UserName = "justin.parker.morrow@gmail.com";
+        creds.Password = @"";
+        client.Credentials = creds;
+        msg.From = new MailAddress("justin.parker.morrow@gmail.com");
+        msg.To.Add("justin.parker.morrow@gmail.com");
+        msg.Subject = "Test";
+        msg.Body = txt;
+        client.Send(msg);
+    }
+
+    private void Test(string text)
+    {
+        JSRuntime.InvokeVoidAsync("alert", text);
     }
 
 #line default
