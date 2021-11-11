@@ -97,7 +97,7 @@ using Microsoft.Extensions.Localization;
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TutorialVideoPage.razor"
+#line 3 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TutorialVideoPage.razor"
 using System.Text.Encodings.Web;
 
 #line default
@@ -105,7 +105,6 @@ using System.Text.Encodings.Web;
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/tutorial_video")]
     [Microsoft.AspNetCore.Components.RouteAttribute("/tutorial_video/{title}/{url}")]
-    [Microsoft.AspNetCore.Components.RouteAttribute("/tutorial_video/{title}/{url}/{formurl}")]
     public partial class TutorialVideoPage : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -114,7 +113,7 @@ using System.Text.Encodings.Web;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 86 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TutorialVideoPage.razor"
+#line 94 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TutorialVideoPage.razor"
             
     [Parameter]
     public string Title { get; set; }

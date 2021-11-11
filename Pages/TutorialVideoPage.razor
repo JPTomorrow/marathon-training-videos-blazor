@@ -1,6 +1,5 @@
 @page "/tutorial_video"
 @page "/tutorial_video/{title}/{url}"
-@page "/tutorial_video/{title}/{url}/{formurl}"
 @using System.Text.Encodings.Web
 @inject IStringLocalizer<App> localizer
 @inject IJSRuntime JSRuntime
@@ -48,6 +47,7 @@
     #tvp-instructions li {
         color: ghostwhite;
         text-align: left;
+        margin-top: 10px;
     }
 
     #tvp-test-btn {
@@ -62,13 +62,21 @@
         background-color: orangered;
         color: ghostwhite;
     }
+
+    @@media(max-width: 1185px) {
+        .fluidMedia iframe {
+            width: 350px;
+            height: 250px;
+            border-radius: 20px;
+        }
+    }
 </style>
 
 <div class="container">
     <h1 id="title">@Title</h1>
 
     <div class="fluidMedia">
-        <iframe id="tvp-video" src="@Url?autoplay=0&showinfo=0&controls=0&modestbranding=1&rel=0&enablejsapi=1" />
+        <iframe id="tvp-video" src="@Url?autoplay=1&showinfo=0&controls=0&modestbranding=1&rel=0&enablejsapi=1" alow />
     </div>
 
     <div class="description">
@@ -78,8 +86,8 @@
             <li>@localizer["TVP_Instruction_Steps_UL1"]</li>
             <li>@localizer["TVP_Instruction_Steps_UL2"]</li>
         </ol>
-        <button id="tvp-test-btn" type="button" class="btn btn-primary"
-            @onclick="GoToTest">@localizer["TVP_Test_Button"]</button>
+        <button id="tvp-test-btn" type="button" class="btn btn-primary" @onclick="GoToTest"
+            disabled>@localizer["TVP_Test_Button"]</button>
     </div>
 </div>
 

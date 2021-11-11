@@ -105,7 +105,7 @@ using Microsoft.Extensions.Localization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 46 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\About.razor"
+#line 41 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\About.razor"
        
     private void GoBackToHome()
     {

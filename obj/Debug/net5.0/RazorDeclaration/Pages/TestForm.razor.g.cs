@@ -118,7 +118,7 @@ using System.Net.Mail;
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/test_form")]
-    [Microsoft.AspNetCore.Components.RouteAttribute("/test_form/{title}/{formurl}")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/test_form/{title}")]
     public partial class TestForm : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -127,12 +127,10 @@ using System.Net.Mail;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 198 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TestForm.razor"
+#line 202 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TestForm.razor"
        
     [Parameter]
     public string Title { get; set; }
-    [Parameter]
-    public string FormUrl { get; set; }
     private List<Question> Questions { get; set; }
     private FormDataEntry Entry { get; set; }
     private bool isSubmitted { get; set; } = false;
@@ -141,11 +139,12 @@ using System.Net.Mail;
     private int totalCorrect { get; set; } = 0;
     private int Percentage { get; set; } = 0;
     private string UniqueCode { get; set; }
+    private ElementReference formRef { get; set; }
+    private ElementReference confirmationRef { get; set; }
 
     protected override void OnParametersSet()
     {
         Title = Title ?? "";
-        FormUrl = FormUrl ?? "";
         formDataService.LoadFormDataFromJson(Title);
         Entry = formDataService.Entry;
 
@@ -156,7 +155,7 @@ using System.Net.Mail;
         }
         else if (selected_language == "es-ES")
         {
-            Questions = formDataService.Entry.English.Questions;
+            Questions = formDataService.Entry.Spanish.Questions;
         }
     }
 
@@ -175,8 +174,8 @@ using System.Net.Mail;
         isSubmitted = true;
         CalculateScore();
 
-        // if (Percentage >= 70)
-        // SendEmail();
+        if (Percentage >= 70)
+            SendEmail();
     }
 
     private void CalculateScore()
@@ -234,20 +233,63 @@ using System.Net.Mail;
 
     private void SendEmail()
     {
-        var txt = "This is a test email";
+        var email = "safetytests@marathonelectrical.com";
+        var onboard_email = "safetyonboarding@marathonelectrical.com";
 
         MailMessage msg = new MailMessage();
-        SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
-        client.UseDefaultCredentials = false;
+        msg.From = new MailAddress(email);
+        msg.To.Add(email);
+        msg.To.Add(onboard_email);
+        msg.Subject = GetMessageSubject();
+        msg.IsBodyHtml = true;
+        msg.Body = GetMessageBody();
+
         var creds = new System.Net.NetworkCredential();
-        creds.UserName = "justin.parker.morrow@gmail.com";
-        creds.Password = @"";
+        creds.UserName = email;
+        creds.Password = @"Rm@n2021*!";
+
+        SmtpClient client = new SmtpClient("smtp.office365.com", 587);
+        client.UseDefaultCredentials = false;
         client.Credentials = creds;
-        msg.From = new MailAddress("justin.parker.morrow@gmail.com");
-        msg.To.Add("justin.parker.morrow@gmail.com");
-        msg.Subject = "Test";
-        msg.Body = txt;
+        client.EnableSsl = true;
+
         client.Send(msg);
+    }
+
+    private string GetMessageSubject()
+    {
+        var subject = "";
+        if (string.IsNullOrWhiteSpace(Entry.FullName))
+        {
+            subject += "An Employee ";
+        }
+        else
+        {
+            subject += Entry.FullName + " ";
+        }
+        subject += "has completed the " + Title + " Test";
+        return subject;
+    }
+
+    private string GetMessageBody()
+    {
+        var body = "<h1>Score: " + totalCorrect + "/" + totalPossible + " -> " + Percentage + "%" + "</h1><!--!-->" +
+        "<h1>Unique Code: " + UniqueCode + "</h1><!--!-->";
+
+        var email = string.IsNullOrWhiteSpace(Entry.EmailAddress) ? "No Email Address Provided" : Entry.EmailAddress;
+        var fname = string.IsNullOrWhiteSpace(Entry.FullName) ? "No Name Provided" : Entry.FullName;
+
+        body += "<h1>Test Name: " + Title + "</h1><!--!-->";
+        body += "<h1>Full Employee Name: " + fname + "</h1><!--!-->";
+        body += "<h1>Employee Email: " + email + "</h1><!--!--><hr /><!--!-->";
+
+        foreach (var q in Questions)
+        {
+            body += "<h3>Question: " + q.Text + "</h3><!--!-->";
+            body += "<p>Answer: " + q.SelectedAnswer + "</p><!--!-->";
+        }
+
+        return body;
     }
 
     private void Test(string text)

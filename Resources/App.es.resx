@@ -142,15 +142,95 @@
     <comment/>
   </data>
   <data name="TVP_Instruction_Steps_P1" xml:space="preserve">
-    <value>Please read carefully and complete all steps in order to ensure that you supervisor is informed that you have watched this video in its entirety.</value>
+    <value>Lea atentamente y complete todos los pasos para asegurarse de que su supervisor esté informado de que ha visto este video en su totalidad.</value>
     <comment/>
   </data>
   <data name="TVP_Instruction_Steps_UL1" xml:space="preserve">
-    <value>Play the video and watch it all the way through, paying close attention as you  will be tested on the material in the video.</value>
+    <value>Reproduzca el video y mírelo de principio a fin, prestando mucha atención, ya que se lo probará con el material del video.</value>
     <comment/>
   </data>
   <data name="TVP_Instruction_Steps_UL2" xml:space="preserve">
-    <value>After watching the video all the way to the end. The button below that says 'Go To Test' will becaome clickable. Click on it to begin the test.</value>
+    <value>Después de ver el video hasta el final. Se podrá hacer clic en el botón de abajo que dice 'Ir a prueba'. Haga clic en él para comenzar la prueba.</value>
+    <comment/>
+  </data>
+  <data name="TVP_Test_Button" xml:space="preserve">
+    <value>Ir a la prueba</value>
+    <comment/>
+  </data>
+  <data name="TF_Take_The_Test" xml:space="preserve">
+    <value>Tomar el examen</value>
+    <comment/>
+  </data>
+  <data name="TF_Submit_Instructions_01" xml:space="preserve">
+    <value>Por favor complete la siguiente prueba. Cuando haya terminado, haga clic en el botón 'Enviar' en la parte inferior del formulario.</value>
+    <comment/>
+  </data>
+  <data name="TF_Full_Name_Entry" xml:space="preserve">
+    <value>Nombre completo</value>
+    <comment/>
+  </data>
+  <data name="TF_Email_Address_Entry" xml:space="preserve">
+    <value>Dirección de correo electrónico</value>
+    <comment/>
+  </data>
+  <data name="TF_Congrats" xml:space="preserve">
+    <value>¡Felicidades!</value>
+    <comment/>
+  </data>
+  <data name="TF_You_Passed" xml:space="preserve">
+    <value>¡Pasaste!</value>
+    <comment/>
+  </data>
+  <data name="TF_Score" xml:space="preserve">
+    <value>Puntaje:</value>
+    <comment/>
+  </data>
+  <data name="TF_Code_Copy_Instructions" xml:space="preserve">
+    <value>Copie el código a continuación y entréguelo a su supervisor para que confirme que completó la prueba. NO navegue fuera de esta página sin escribir el código o de lo contrario tendrá que ver el video y completar la prueba nuevamente para obtener otro código.</value>
+    <comment/>
+  </data>
+  <data name="TF_Code" xml:space="preserve">
+    <value>Código:</value>
+    <comment/>
+  </data>
+  <data name="TF_Return_To_Training_Videos_Btn" xml:space="preserve">
+    <value>Volver a los videos de capacitación</value>
+    <comment/>
+  </data>
+  <data name="TF_Sorry" xml:space="preserve">
+    <value>Perdón,</value>
+    <comment/>
+  </data>
+  <data name="TF_You_Failed" xml:space="preserve">
+    <value>fallaste la prueba.</value>
+    <comment/>
+  </data>
+  <data name="TF_Rewatch_Instructions" xml:space="preserve">
+    <value>Vuelva a ver el vídeo hasta el final y vuelva a realizar la prueba. 70%+ es una calificación aprobatoria.</value>
+    <comment/>
+  </data>
+  <data name="TF_Go_Back_To_Videos" xml:space="preserve">
+    <value>Volver al video</value>
+    <comment/>
+  </data>
+  <data name="TF_Submit_Btn" xml:space="preserve">
+    <value>Enviar</value>
+    <comment/>
+  </data>
+  <data name="About_About" xml:space="preserve">
+    <value>Sobre</value>
+    <comment/>
+  </data>
+  <data name="About_Preamble" xml:space="preserve">
+    <value>Marathon Electrical LLC. se enorgullece de su iniciativa de capacitar a nuestros empleados para enfrentar las condiciones, en ocasiones adversas, presentes en nuestro campo de trabajo. Este sitio web es un paso hacia esa iniciativa. Proporciona videos de capacitación para que los empleados los vean, seguidos de una breve prueba. La prueba se enviará al supervisor de los empleados, que confirmará que el empleado ha visto el video de capacitación apropiado. Esto nos permite ser responsables de lo que nuestros empleados hacen y no saben, y de la capacitación que han recibido.</value>
+    <comment/>
+  </data>
+  <data name="About_Created_By" xml:space="preserve">
+    <value>Sitio web creado por: Justin Morrow</value>
+    <comment/>
+  </data>
+  <data name="About_Go_Back" xml:space="preserve">
+    <value>Regresa</value>
     <comment/>
   </data>
 </root>

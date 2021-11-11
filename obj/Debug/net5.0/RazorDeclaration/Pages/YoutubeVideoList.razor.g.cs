@@ -110,6 +110,13 @@ using System.Text.Encodings.Web;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\YoutubeVideoList.razor"
+using System.Globalization;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/youtube_video_list")]
     public partial class YoutubeVideoList : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -119,7 +126,7 @@ using System.Text.Encodings.Web;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 41 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\YoutubeVideoList.razor"
+#line 43 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\YoutubeVideoList.razor"
        
     private YoutubeVideoEntry[] videos;
 
@@ -128,10 +135,19 @@ using System.Text.Encodings.Web;
         videos = youtubeVideoService.GetEntries();
     }
 
-    private void GoToVideoPage(string title, string link, string form_url)
+    private void GoToVideoPage(string title, string english_link, string spanish_link)
     {
-        var url = "/tutorial_video/" + title + "/" + UrlEncoder.Create().Encode(link) + "/" +
-        UrlEncoder.Create().Encode(form_url);
+        var selected_language = CultureInfo.CurrentCulture.Name;
+        var url = "/tutorial_video/" + title + "/";
+        if (selected_language == "en-US")
+        {
+            url += UrlEncoder.Create().Encode(english_link);
+        }
+        else if (selected_language == "es-ES")
+        {
+            url += UrlEncoder.Create().Encode(spanish_link);
+        }
+
         navMan.NavigateTo(url);
     }
 

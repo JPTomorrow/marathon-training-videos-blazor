@@ -157,4 +157,80 @@
     <value>Go To Test</value>
     <comment/>
   </data>
+  <data name="TF_Take_The_Test" xml:space="preserve">
+    <value>Take The Test</value>
+    <comment/>
+  </data>
+  <data name="TF_Submit_Instructions_01" xml:space="preserve">
+    <value>Please fill out the following test. When you are done, click the 'Submit' button at the bottom of the form.</value>
+    <comment/>
+  </data>
+  <data name="TF_Full_Name_Entry" xml:space="preserve">
+    <value>Full Name</value>
+    <comment/>
+  </data>
+  <data name="TF_Email_Address_Entry" xml:space="preserve">
+    <value>Email Address</value>
+    <comment/>
+  </data>
+  <data name="TF_Congrats" xml:space="preserve">
+    <value>Congratulations!</value>
+    <comment/>
+  </data>
+  <data name="TF_You_Passed" xml:space="preserve">
+    <value>You Passed!</value>
+    <comment/>
+  </data>
+  <data name="TF_Score" xml:space="preserve">
+    <value>Score:</value>
+    <comment/>
+  </data>
+  <data name="TF_Code_Copy_Instructions" xml:space="preserve">
+    <value>Copy the code below and turn it into your supervisor for them to confirm that you                     completed the test. DO NOT navigate away from this page without writing down the code or else you will have                     to watch the video and complete the test again to get another code.</value>
+    <comment/>
+  </data>
+  <data name="TF_Code" xml:space="preserve">
+    <value>Code:</value>
+    <comment/>
+  </data>
+  <data name="TF_Return_To_Training_Videos_Btn" xml:space="preserve">
+    <value>Return to training videos</value>
+    <comment/>
+  </data>
+  <data name="TF_Sorry" xml:space="preserve">
+    <value>Sorry,</value>
+    <comment/>
+  </data>
+  <data name="TF_You_Failed" xml:space="preserve">
+    <value>you failed the test.</value>
+    <comment/>
+  </data>
+  <data name="TF_Rewatch_Instructions" xml:space="preserve">
+    <value>Please rewatch the video all the way through and retake the test. 70%+ is a passing grade.</value>
+    <comment/>
+  </data>
+  <data name="TF_Go_Back_To_Videos" xml:space="preserve">
+    <value>Go back to video</value>
+    <comment/>
+  </data>
+  <data name="TF_Submit_Btn" xml:space="preserve">
+    <value>Submit</value>
+    <comment/>
+  </data>
+  <data name="About_About" xml:space="preserve">
+    <value>About</value>
+    <comment/>
+  </data>
+  <data name="About_Preamble" xml:space="preserve">
+    <value>Marathon Electrical LLC. prides itself in its initiative to train our employee's to face the, sometimes adverse, conditions present in our field of work. This website is a step towards that initiative. It provides training videos for employees to watch, followed by a short test. The test will be submitted to the employees supervisor, which will confirm the employee has seen the appropriate training video. This allows us to be accountable for what our employees do and don't know, and what training they have recieved.</value>
+    <comment/>
+  </data>
+  <data name="About_Created_By" xml:space="preserve">
+    <value>Website Created By: Justin Morrow</value>
+    <comment/>
+  </data>
+  <data name="About_Go_Back" xml:space="preserve">
+    <value>Go Back</value>
+    <comment/>
+  </data>
 </root>

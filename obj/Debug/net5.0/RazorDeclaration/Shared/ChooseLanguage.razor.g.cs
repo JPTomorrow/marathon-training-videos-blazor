@@ -104,7 +104,7 @@ using Microsoft.Extensions.Localization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 55 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Shared\ChooseLanguage.razor"
+#line 96 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Shared\ChooseLanguage.razor"
        
     private string selectedCulture = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
     private Dictionary<string, string> cultures;

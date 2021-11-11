@@ -3,7 +3,7 @@ namespace MarathonTutorialWebsite.Data
     public class YoutubeVideoService
     {
         private static YoutubeVideoEntry[] videos = new YoutubeVideoEntry[] {
-            new YoutubeVideoEntry("New Hire Test 01", "new hire video", "https://www.youtube.com/embed/KZCIIg1Ti2w", "https://www.cognitoforms.com/f/zO-2uCkjikSrQTmb1-o_Tg/1"),
+            new YoutubeVideoEntry("New Hire Training", "New hire training video that every employee of Marathon Electrical will watch.", "https://www.youtube.com/embed/Qj5PkIrmHoQ", "https://www.youtube.com/embed/cxaDNRfRj2Y"),
         };
 
         public YoutubeVideoEntry[] GetEntries()

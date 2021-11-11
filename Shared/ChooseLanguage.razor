@@ -26,12 +26,53 @@
     #cl-submit-btn {
         background-color: transparent;
         border: 1px solid orangered;
+        border-radius: 10px;
         color: orangered;
     }
 
     #cl-submit-btn:hover {
         background-color: orangered;
         color: ghostwhite;
+    }
+
+    @@media(max-width: 920px) {
+        #site-lang {
+            float: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #language-selection-container {
+            width: 300px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 50px);
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        #language-selection-container form {
+            margin: 0;
+            padding: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #language-selection-container span {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        #select-language-form {
+            float: none;
+        }
+
+        #cl-submit-btn {
+            width: 100%;
+            grid-column: 1 / span 2;
+            grid-row: 2;
+            margin-bottom: 10px;
+        }
     }
 </style>
 
@@ -46,9 +87,9 @@
                     <option value="@culture.Key">@culture.Value</option>
                 }
             </select>
-            <button id="cl-submit-btn" type="button" class="btn btn-outline-primary" @onclick="RequestCultureChange">Change
-                Language</button>
         </form>
+        <button id="cl-submit-btn" type="button" class="btn btn-outline-primary" @onclick="RequestCultureChange">Change
+            Language</button>
     </div>
 }
 

@@ -1,5 +1,5 @@
 @page "/test_form"
-@page "/test_form/{title}/{formurl}"
+@page "/test_form/{title}"
 
 @inject IStringLocalizer<App> localizer
 @inject IJSRuntime JSRuntime
@@ -107,21 +107,27 @@
     #tf-submitted-code {
         margin-top: 25px;
     }
+
+    @@media(max-width: 920px) {
+        #tf-container {
+            margin-left: 25px;
+            margin-right: 25px;
+            width: 380px;
+        }
+    }
 </style>
 
-<div id="tf-container">
-    <StandardHeaderOne Underlined="true">Take The Test</StandardHeaderOne>
-    <h2 id="tf-test-name">@Title</h2>
-    <p id="tf-instructions">Please fill out the following test. When you are done, click the 'Submit' button at the
-        bottom of the form.</p>
+<div @ref="formRef" id="tf-container">
+    <StandardHeaderOne Underlined="true">@localizer["TF_Take_The_Test"]</StandardHeaderOne>
+    <p id="tf-instructions">@localizer["TF_Submit_Instructions_01"]</p>
 
     <EditForm class="tf-edit-form" model="@Entry">
-        <label class="tf-label" for="tf-full-name">Full Name</label>
+        <label class="tf-label" for="tf-full-name">@localizer["TF_Full_Name_Entry"]</label>
         <InputText id="tf-full-name" @bind-Value="Entry.FullName" />
     </EditForm>
 
     <EditForm class="tf-edit-form" model="@Entry">
-        <label class="tf-label" for="tf-email">Email Address</label>
+        <label class="tf-label" for="tf-email">@localizer["TF_Email_Address_Entry"]</label>
         <InputText id="tf-email" @bind-Value="Entry.EmailAddress" />
     </EditForm>
 
@@ -161,35 +167,33 @@
         </InputRadioGroup>
         }
         <br />
-        <input id="tf-submit-btn" class="btn btn-primary" type="submit" value="Submit">
+        <input id="tf-submit-btn" class="btn btn-primary" type="submit" value=@localizer["TF_Submit_Btn"]>
     </EditForm>
 </div>
 
 @if (isSubmitted)
 {
     <div class="tf-submitted-container-bg">
-        <div class="tf-submitted-container">
+        <div @ref="confirmationRef" class="tf-submitted-container">
             @if (isPassed)
             {
-                <h1 class="tf-passed-header">Congratulations! <font color="green">You Passed!</font>
+                <h1 class="tf-passed-header">@localizer["TF_Congrats"] <font color="green">@localizer["TF_You_Passed"]</font>
                 </h1>
-                <p class="tf-submitted-score">Score: @totalCorrect / @totalPossible -> @Percentage%</p>
-                <h2 class="tf-passed-header-2">Copy the code below and turn it into your supervisor for them to confirm that you
-                    completed the test. DO NOT navigate away from this page without writing down the code or else you will have
-                    to watch the video and complete the test again to get another code.</h2>
-                <h2 id="tf-submitted-code">Code: <font color="green">@UniqueCode</font>
+                <p class="tf-submitted-score">@localizer["TF_Score"] @totalCorrect / @totalPossible -> @Percentage%</p>
+                <h2 class="tf-passed-header-2">@localizer["TF_Code_Copy_Instructions"]</h2>
+                <h2 id="tf-submitted-code">@localizer["TF_Code"] <font color="green">@UniqueCode</font>
                 </h2>
-                <button id="tf-video-list-btn" class="btn btn-primary" @onclick="GoToVideoList">Return to training
-                    videos</button>
+                <button id="tf-video-list-btn" class="btn btn-primary"
+            @onclick="GoToVideoList">@localizer["TF_Return_To_Training_Videos_Btn"]</button>
             }
             else
             {
-                <h1 class="tf-passed-header">Sorry, <font color="red">you failed the test.</font>
+                <h1 class="tf-passed-header">@localizer["TF_Sorry"] <font color="red">@localizer["TF_You_Failed"]</font>
                 </h1>
-                <p class="tf-submitted-score">Score: @totalCorrect / @totalPossible -> @Percentage%</p>
-                <h2 class="tf-passed-header-2">Please rewatch the video all the way through and retake the test. 70%+ is a
-                    passing grade.</h2>
-                <button id="tf-rewatch-vid-btn" class="btn btn-primary" @onclick="GoToVideo">Go back to video</button>
+                <p class="tf-submitted-score">@localizer["TF_Score"] @totalCorrect / @totalPossible -> @Percentage%</p>
+                <h2 class="tf-passed-header-2">@localizer["TF_Rewatch_Instructions"]</h2>
+                <button id="tf-rewatch-vid-btn" class="btn btn-primary"
+            @onclick="GoToVideo">@localizer["TF_Go_Back_To_Videos"]</button>
             }
         </div>
     </div>
@@ -198,8 +202,6 @@
 @code {
     [Parameter]
     public string Title { get; set; }
-    [Parameter]
-    public string FormUrl { get; set; }
     private List<Question> Questions { get; set; }
     private FormDataEntry Entry { get; set; }
     private bool isSubmitted { get; set; } = false;
@@ -208,11 +210,12 @@
     private int totalCorrect { get; set; } = 0;
     private int Percentage { get; set; } = 0;
     private string UniqueCode { get; set; }
+    private ElementReference formRef { get; set; }
+    private ElementReference confirmationRef { get; set; }
 
     protected override void OnParametersSet()
     {
         Title = Title ?? "";
-        FormUrl = FormUrl ?? "";
         formDataService.LoadFormDataFromJson(Title);
         Entry = formDataService.Entry;
 
@@ -223,7 +226,7 @@
         }
         else if (selected_language == "es-ES")
         {
-            Questions = formDataService.Entry.English.Questions;
+            Questions = formDataService.Entry.Spanish.Questions;
         }
     }
 
@@ -242,8 +245,8 @@
         isSubmitted = true;
         CalculateScore();
 
-        // if (Percentage >= 70)
-        // SendEmail();
+        if (Percentage >= 70)
+            SendEmail();
     }
 
     private void CalculateScore()
@@ -301,20 +304,63 @@
 
     private void SendEmail()
     {
-        var txt = "This is a test email";
+        var email = "safetytests@marathonelectrical.com";
+        var onboard_email = "safetyonboarding@marathonelectrical.com";
 
         MailMessage msg = new MailMessage();
-        SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
-        client.UseDefaultCredentials = false;
+        msg.From = new MailAddress(email);
+        msg.To.Add(email);
+        msg.To.Add(onboard_email);
+        msg.Subject = GetMessageSubject();
+        msg.IsBodyHtml = true;
+        msg.Body = GetMessageBody();
+
         var creds = new System.Net.NetworkCredential();
-        creds.UserName = "justin.parker.morrow@gmail.com";
-        creds.Password = @"";
+        creds.UserName = email;
+        creds.Password = @"Rm@n2021*!";
+
+        SmtpClient client = new SmtpClient("smtp.office365.com", 587);
+        client.UseDefaultCredentials = false;
         client.Credentials = creds;
-        msg.From = new MailAddress("justin.parker.morrow@gmail.com");
-        msg.To.Add("justin.parker.morrow@gmail.com");
-        msg.Subject = "Test";
-        msg.Body = txt;
+        client.EnableSsl = true;
+
         client.Send(msg);
+    }
+
+    private string GetMessageSubject()
+    {
+        var subject = "";
+        if (string.IsNullOrWhiteSpace(Entry.FullName))
+        {
+            subject += "An Employee ";
+        }
+        else
+        {
+            subject += Entry.FullName + " ";
+        }
+        subject += "has completed the " + Title + " Test";
+        return subject;
+    }
+
+    private string GetMessageBody()
+    {
+        var body = "<h1>Score: " + totalCorrect + "/" + totalPossible + " -> " + Percentage + "%" + "</h1><!--!-->" +
+        "<h1>Unique Code: " + UniqueCode + "</h1><!--!-->";
+
+        var email = string.IsNullOrWhiteSpace(Entry.EmailAddress) ? "No Email Address Provided" : Entry.EmailAddress;
+        var fname = string.IsNullOrWhiteSpace(Entry.FullName) ? "No Name Provided" : Entry.FullName;
+
+        body += "<h1>Test Name: " + Title + "</h1><!--!-->";
+        body += "<h1>Full Employee Name: " + fname + "</h1><!--!-->";
+        body += "<h1>Employee Email: " + email + "</h1><!--!--><hr /><!--!-->";
+
+        foreach (var q in Questions)
+        {
+            body += "<h3>Question: " + q.Text + "</h3><!--!-->";
+            body += "<p>Answer: " + q.SelectedAnswer + "</p><!--!-->";
+        }
+
+        return body;
     }
 
     private void Test(string text)

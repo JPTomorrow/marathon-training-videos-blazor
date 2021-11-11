@@ -2,6 +2,7 @@
 
 @using MarathonTutorialWebsite.Data
 @using System.Text.Encodings.Web
+@using System.Globalization
 @inject YoutubeVideoService youtubeVideoService
 @inject NavigationManager navMan
 @inject IStringLocalizer<App> localizer
@@ -25,7 +26,8 @@ else
                 {
                     <tr>
                         <td>
-                            <a class="tvl-video-entry" href="" @onclick="() => GoToVideoPage(v.Title, v.VideoUrl, v.FormUrl)"
+                            <a class="tvl-video-entry" href=""
+                        @onclick="() => GoToVideoPage(v.Title, v.EnglishVideoUrl, v.SpanishVideoUrl)"
                         @onclick:preventDefault>
                                 @v.Title
                             </a>
@@ -46,10 +48,19 @@ else
         videos = youtubeVideoService.GetEntries();
     }
 
-    private void GoToVideoPage(string title, string link, string form_url)
+    private void GoToVideoPage(string title, string english_link, string spanish_link)
     {
-        var url = "/tutorial_video/" + title + "/" + UrlEncoder.Create().Encode(link) + "/" +
-        UrlEncoder.Create().Encode(form_url);
+        var selected_language = CultureInfo.CurrentCulture.Name;
+        var url = "/tutorial_video/" + title + "/";
+        if (selected_language == "en-US")
+        {
+            url += UrlEncoder.Create().Encode(english_link);
+        }
+        else if (selected_language == "es-ES")
+        {
+            url += UrlEncoder.Create().Encode(spanish_link);
+        }
+
         navMan.NavigateTo(url);
     }
 }

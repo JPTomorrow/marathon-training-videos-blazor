@@ -104,7 +104,7 @@ using Microsoft.Extensions.Localization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 35 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Shared\MainLayout.razor"
+#line 36 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Shared\MainLayout.razor"
        
     private void GoToTrainingVids()
     {

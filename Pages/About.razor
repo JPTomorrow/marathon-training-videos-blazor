@@ -32,15 +32,10 @@
 </style>
 
 <div id="about-container">
-    <StandardHeaderOne Underlined="true">About</StandardHeaderOne>
-    <p id="about-p1">Marathon Electrical LLC. prides itself in its initiative to train our employee's to face the,
-        sometimes adverse,
-        conditions present in our field of work. This website is a step towards that initiative. It provides training
-        videos for employees to watch, followed by a short test. The test will be submitted to the employees supervisor,
-        which will confirm the employee has seen the appropriate training video. This allows us to be accountable for
-        what our employees do and don't know, and what training they have recieved.</p>
-    <p id="about-author">Website Created By: Justin Morrow</p>
-    <button id="about-back-btn" class="btn btn-primary" @onclick="GoBackToHome">Go Back</button>
+    <StandardHeaderOne Underlined="true">@localizer["About_About"]</StandardHeaderOne>
+    <p id="about-p1">@localizer["About_Preamble"]</p>
+    <p id="about-author">@localizer["About_Created_By"]</p>
+    <button id="about-back-btn" class="btn btn-primary" @onclick="GoBackToHome">@localizer["About_Go_Back"]</button>
 </div>
 
 @code {

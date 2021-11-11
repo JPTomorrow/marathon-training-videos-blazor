@@ -105,7 +105,7 @@ using Microsoft.Extensions.Localization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 41 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\StandardHeaderOne.razor"
+#line 58 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\StandardHeaderOne.razor"
        
     [Parameter]
     public RenderFragment ChildContent { get; set; }
