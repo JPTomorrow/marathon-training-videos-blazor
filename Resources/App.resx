@@ -142,7 +142,7 @@
     <comment/>
   </data>
   <data name="TVP_Instruction_Steps_P1" xml:space="preserve">
-    <value>Please read carefully and complete all steps in order to ensure that you supervisor is informed that you have watched this video in its entirety.</value>
+    <value>Please read carefully and complete all of the steps in order to ensure that you supervisor is informed that you have watched this video in its entirety.</value>
     <comment/>
   </data>
   <data name="TVP_Instruction_Steps_UL1" xml:space="preserve">
@@ -154,7 +154,7 @@
     <comment/>
   </data>
   <data name="TVP_Test_Button" xml:space="preserve">
-    <value>Go To Test</value>
+    <value>Take the test</value>
     <comment/>
   </data>
   <data name="TF_Take_The_Test" xml:space="preserve">

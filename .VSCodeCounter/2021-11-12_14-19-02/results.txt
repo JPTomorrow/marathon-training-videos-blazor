@@ -1,0 +1,89 @@
+Date : 2021-11-12 14:19:02
+Directory : c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite
+Total : 45 files,  2775 codes, 162 comments, 316 blanks, all 3253 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| aspnetcorerazor    |         16 |        921 |         29 |        168 |      1,118 |
+| XML                |          4 |        902 |        121 |          5 |      1,028 |
+| JSON               |          4 |        372 |          0 |          3 |        375 |
+| C#                 |         11 |        299 |          5 |         51 |        355 |
+| CSS                |          7 |        201 |          7 |         44 |        252 |
+| Markdown           |          2 |         72 |          0 |         45 |        117 |
+| JSON with Comments |          1 |          8 |          0 |          0 |          8 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                  | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                     |         45 |      2,775 |        162 |        316 |      3,253 |
+| Controllers                                                                                                                           |          1 |         21 |          0 |          2 |         23 |
+| Data                                                                                                                                  |          7 |        165 |          1 |         28 |        194 |
+| Pages                                                                                                                                 |         13 |        754 |         29 |        144 |        927 |
+| Properties                                                                                                                            |          1 |         28 |          0 |          1 |         29 |
+| Resources                                                                                                                             |          2 |        354 |        118 |          0 |        472 |
+| Shared                                                                                                                                |          6 |        327 |          1 |         63 |        391 |
+| wwwroot                                                                                                                               |          6 |        976 |          9 |         56 |      1,041 |
+| wwwroot\css                                                                                                                           |          5 |        656 |          9 |         56 |        721 |
+| wwwroot\css\bootstrap                                                                                                                 |          1 |          1 |          6 |          0 |          7 |
+| wwwroot\css\open-iconic                                                                                                               |          3 |        611 |          3 |         46 |        660 |
+| wwwroot\css\open-iconic\font                                                                                                          |          2 |        541 |          3 |          1 |        545 |
+| wwwroot\css\open-iconic\font\css                                                                                                      |          1 |          1 |          0 |          0 |          1 |
+| wwwroot\css\open-iconic\font\fonts                                                                                                    |          1 |        540 |          3 |          1 |        544 |
+| wwwroot\data                                                                                                                          |          1 |        320 |          0 |          0 |        320 |
++---------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                                              | language           | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\App.razor                                                      | aspnetcorerazor    |         10 |          0 |          1 |         11 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Controllers\CultureController.cs                               | C#                 |         21 |          0 |          2 |         23 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Data\CounterData.cs                                            | C#                 |          8 |          0 |          2 |         10 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Data\FormDataEntry.cs                                          | C#                 |         68 |          0 |         12 |         80 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Data\FormDataService.cs                                        | C#                 |         22 |          1 |          3 |         26 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Data\WeatherForecast.cs                                        | C#                 |         11 |          0 |          5 |         16 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Data\WeatherForecastService.cs                                 | C#                 |         23 |          0 |          3 |         26 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Data\YoutubeVideoEntry.cs                                      | C#                 |         20 |          0 |          2 |         22 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Data\YoutubeVideoService.cs                                    | C#                 |         13 |          0 |          1 |         14 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\MarathonTutorialWebsite.csproj                                 | XML                |          8 |          0 |          4 |         12 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\About.razor                                              | aspnetcorerazor    |         38 |          0 |          9 |         47 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\Counter.razor                                            | aspnetcorerazor    |          0 |         29 |          0 |         29 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\Error.cshtml                                             | aspnetcorerazor    |         36 |          0 |          7 |         43 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\Error.cshtml.cs                                          | C#                 |         27 |          0 |          6 |         33 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\FetchData.razor                                          | aspnetcorerazor    |         40 |          0 |          7 |         47 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\Index.razor                                              | aspnetcorerazor    |          4 |          0 |          2 |          6 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\Index.razor.css                                          | CSS                |          0 |          0 |          1 |          1 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\StandardHeaderOne.razor                                  | aspnetcorerazor    |         51 |          0 |         12 |         63 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TestForm.razor                                           | aspnetcorerazor    |        312 |          0 |         58 |        370 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TutorialVideoPage.razor                                  | aspnetcorerazor    |        101 |          0 |         19 |        120 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\YoutubeVideoList.razor                                   | aspnetcorerazor    |         60 |          0 |          7 |         67 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\YoutubeVideoList.razor.css                               | CSS                |         16 |          0 |          5 |         21 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\_Host.cshtml                                             | aspnetcorerazor    |         69 |          0 |         11 |         80 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Program.cs                                                     | C#                 |         24 |          0 |          3 |         27 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Properties\launchSettings.json                                 | JSON               |         28 |          0 |          1 |         29 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\README.md                                                      | Markdown           |          2 |          0 |          0 |          2 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Resources\App.es.resx                                          | XML                |        177 |         59 |          0 |        236 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Resources\App.resx                                             | XML                |        177 |         59 |          0 |        236 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Shared\ChooseLanguage.razor                                    | aspnetcorerazor    |        102 |          0 |         19 |        121 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Shared\MainLayout.razor                                        | aspnetcorerazor    |         39 |          0 |          8 |         47 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Shared\MainLayout.razor.css                                    | CSS                |         89 |          0 |         16 |        105 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Shared\NavMenu.razor                                           | aspnetcorerazor    |         33 |          0 |          5 |         38 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Shared\NavMenu.razor.css                                       | CSS                |         50 |          1 |         12 |         63 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Shared\SurveyPrompt.razor                                      | aspnetcorerazor    |         14 |          0 |          3 |         17 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Startup.cs                                                     | C#                 |         62 |          4 |         12 |         78 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\_Imports.razor                                                 | aspnetcorerazor    |         12 |          0 |          0 |         12 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\appsettings.Development.json                                   | JSON               |         10 |          0 |          1 |         11 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\appsettings.json                                               | JSON               |         14 |          0 |          1 |         15 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\workspace.code-workspace                                       | JSON with Comments |          8 |          0 |          0 |          8 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\wwwroot\css\bootstrap\bootstrap.min.css                        | CSS                |          1 |          6 |          0 |          7 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\wwwroot\css\open-iconic\README.md                              | Markdown           |         70 |          0 |         45 |        115 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\wwwroot\css\open-iconic\font\css\open-iconic-bootstrap.min.css | CSS                |          1 |          0 |          0 |          1 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\wwwroot\css\open-iconic\font\fonts\open-iconic.svg             | XML                |        540 |          3 |          1 |        544 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\wwwroot\css\site.css                                           | CSS                |         44 |          0 |         10 |         54 |
+| c:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\wwwroot\data\marathon_tests.json                               | JSON               |        320 |          0 |          0 |        320 |
+| Total                                                                                                                                 |                    |      2,775 |        162 |        316 |      3,253 |
++---------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

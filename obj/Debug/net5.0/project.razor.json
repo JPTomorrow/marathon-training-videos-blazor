@@ -219,6 +219,59 @@
         }
       },
       {
+        "HashCode": -37970104,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Pages.TestForm",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "TestForm"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.TestForm"
+        }
+      },
+      {
+        "HashCode": 1866649771,
+        "Kind": "Components.Component",
+        "Name": "MarathonTutorialWebsite.Pages.TestForm",
+        "AssemblyName": "MarathonTutorialWebsite",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MarathonTutorialWebsite.Pages.TestForm"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MarathonTutorialWebsite.Pages.TestForm",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 630942073,
         "Kind": "Components.Component",
         "Name": "MarathonTutorialWebsite.Pages.Index",
@@ -366,59 +419,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "MarathonTutorialWebsite.Pages.TutorialVideoPage",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -37970104,
-        "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Pages.TestForm",
-        "AssemblyName": "MarathonTutorialWebsite",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "TestForm"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Pages.TestForm"
-        }
-      },
-      {
-        "HashCode": 1866649771,
-        "Kind": "Components.Component",
-        "Name": "MarathonTutorialWebsite.Pages.TestForm",
-        "AssemblyName": "MarathonTutorialWebsite",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "MarathonTutorialWebsite.Pages.TestForm"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MarathonTutorialWebsite.Pages.TestForm",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
