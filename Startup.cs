@@ -33,6 +33,7 @@ namespace MarathonTutorialWebsite
             services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<YoutubeVideoService>();
             services.AddSingleton<FormDataService>();
+            services.AddSingleton<SMTPLoginCredentials>();
         }
 
         private RequestLocalizationOptions GetLocalizationOptions()

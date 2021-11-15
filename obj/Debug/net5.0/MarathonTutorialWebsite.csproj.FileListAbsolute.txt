@@ -154,3 +154,4 @@ C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug
 C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\ref\MarathonTutorialWebsite.dll
 C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\MarathonTutorialWebsite.pdb
 C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\obj\Debug\net5.0\MarathonTutorialWebsite.genruntimeconfig.cache
+C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\bin\Debug\net5.0\Creds\creds.json

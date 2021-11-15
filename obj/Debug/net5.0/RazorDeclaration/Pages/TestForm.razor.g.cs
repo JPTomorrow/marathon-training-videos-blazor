@@ -141,6 +141,7 @@ using System.Net.Mail;
     private string UniqueCode { get; set; }
     private ElementReference formRef { get; set; }
     private ElementReference confirmationRef { get; set; }
+    private SMTPLoginCredentials Credentials { get; set; }
 
     protected override void OnParametersSet()
     {
@@ -157,6 +158,8 @@ using System.Net.Mail;
         {
             Questions = formDataService.Entry.Spanish.Questions;
         }
+
+        Credentials = SMTPLoginCredentials.LoadCredsFromJson();
     }
 
     private async void GoToVideo()
@@ -233,7 +236,7 @@ using System.Net.Mail;
 
     private void SendEmail()
     {
-        var email = "safetytests@marathonelectrical.com";
+        var email = Credentials.Email;
         var onboard_email = "safetyonboarding@marathonelectrical.com";
 
         MailMessage msg = new MailMessage();
@@ -243,7 +246,7 @@ using System.Net.Mail;
         msg.IsBodyHtml = true;
         msg.Subject = GetMessageSubject();
         msg.Body = GetMessageBody();
-        var creds = new System.Net.NetworkCredential(email, "Rm@n2021*!");
+        var creds = new System.Net.NetworkCredential(email, Credentials.Password);
 
         SmtpClient client = new SmtpClient("smtp.office365.com", 587);
         client.DeliveryMethod = SmtpDeliveryMethod.Network;
