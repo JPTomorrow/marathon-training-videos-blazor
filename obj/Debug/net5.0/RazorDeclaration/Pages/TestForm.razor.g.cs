@@ -240,15 +240,13 @@ using System.Net.Mail;
         msg.From = new MailAddress(email);
         msg.To.Add(email);
         msg.To.Add(onboard_email);
-        msg.Subject = GetMessageSubject();
         msg.IsBodyHtml = true;
+        msg.Subject = GetMessageSubject();
         msg.Body = GetMessageBody();
-
-        var creds = new System.Net.NetworkCredential();
-        creds.UserName = email;
-        creds.Password = @"Rm@n2021*!";
+        var creds = new System.Net.NetworkCredential(email, "Rm@n2021*!");
 
         SmtpClient client = new SmtpClient("smtp.office365.com", 587);
+        client.DeliveryMethod = SmtpDeliveryMethod.Network;
         client.UseDefaultCredentials = false;
         client.Credentials = creds;
         client.EnableSsl = true;
@@ -259,6 +257,7 @@ using System.Net.Mail;
     private string GetMessageSubject()
     {
         var subject = "";
+
         if (string.IsNullOrWhiteSpace(Entry.FullName))
         {
             subject += "An Employee ";
@@ -267,6 +266,7 @@ using System.Net.Mail;
         {
             subject += Entry.FullName + " ";
         }
+
         subject += "has completed the " + Title + " Test";
         return subject;
     }
