@@ -7,7 +7,7 @@
 @inject NavigationManager navigationManager
 
 <style>
-    h1 {
+    #title {
         padding-top: 25px;
         padding-bottom: 25px;
         color: ghostwhite;
@@ -21,14 +21,17 @@
     }
 
     .fluidMedia {
-        width: 100%;
+        width: 1022px;
+        padding: 0;
+        height: 768px;
         overflow: hidden;
+        border: 1px solid #ddd;
+        border-radius: 20px;
     }
 
     .fluidMedia iframe {
         width: 1024px;
         height: 768px;
-        border-radius: 20px;
     }
 
     .description {
@@ -55,20 +58,32 @@
         width: 50%;
         margin-top: 50px;
         background-color: transparent;
-        border: 1px solid orangered;
-        color: orangered;
+        border: 1px solid #eb1e23;
+        color: #eb1e23;
     }
 
     #tvp-test-btn:hover {
-        background-color: orangered;
+        background-color: #eb1e23;
         color: ghostwhite;
     }
 
-    @@media(max-width: 1185px) {
+    @@media(max-width: 1200px) {
+        .fluidMedia {
+            width: 348px;
+            height: 250px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .fluidMedia iframe {
             width: 350px;
             height: 250px;
-            border-radius: 20px;
+        }
+
+        #title {
+            font-size: 22pt;
         }
     }
 </style>
@@ -77,15 +92,20 @@
     <h1 id="title">@Title</h1>
 
     <div class="fluidMedia">
-        <iframe id="tvp-video" src="@Url?autoplay=1&showinfo=0&controls=0&modestbranding=1&rel=0&enablejsapi=1" alow />
+        <iframe id="tvp-video" src="@Url?autoplay=1&showinfo=0&controls=0&modestbranding=1&rel=0&enablejsapi=1"
+            allowfullscreen />
     </div>
 
     <div class="description">
-        <StandardHeaderOne Underlined="true">@localizer["TVP_Instructions"]</StandardHeaderOne>
+        <StandardHeaderOne Underlined="true">@localizer["TVP_Instructions"]
+        </StandardHeaderOne>
         <p>@localizer["TVP_Instruction_Steps_P1"]</p>
         <ol id="tvp-instructions">
             <li>@localizer["TVP_Instruction_Steps_UL1"]</li>
             <li>@localizer["TVP_Instruction_Steps_UL2"]</li>
+            <li>@localizer["TVP_Instruction_Steps_UL3"]</li>
+            <li>@localizer["TVP_Instruction_Steps_UL4"]</li>
+            <li>@localizer["TVP_Instruction_Steps_UL5"]</li>
         </ol>
         <button id="tvp-test-btn" type="button" class="btn btn-primary" @onclick="GoToTest"
             disabled>@localizer["TVP_Test_Button"]</button>
@@ -97,8 +117,6 @@
     public string Title { get; set; }
     [Parameter]
     public string Url { get; set; }
-    [Parameter]
-    public string FormUrl { get; set; }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -109,12 +127,11 @@
     {
         Title = Title ?? "";
         Url = Url ?? "";
-        FormUrl = FormUrl ?? "";
     }
 
     private void GoToTest()
     {
-        var url = "/test_form/" + Title + "/" + UrlEncoder.Create().Encode(FormUrl);
+        var url = "/test_form/" + Title;
         navigationManager.NavigateTo(url);
     }
 }

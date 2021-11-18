@@ -142,15 +142,27 @@
     <comment/>
   </data>
   <data name="TVP_Instruction_Steps_P1" xml:space="preserve">
-    <value>Lea atentamente y complete todos los pasos para asegurarse de que su supervisor esté informado de que ha visto este video en su totalidad.</value>
+    <value>Lea atentamente y complete todos los pasos para asegurarse de que su reclutador esté informado de que ha visto este video.</value>
     <comment/>
   </data>
   <data name="TVP_Instruction_Steps_UL1" xml:space="preserve">
-    <value>Reproduzca el video y mírelo de principio a fin, prestando mucha atención, ya que se lo probará con el material del video.</value>
+    <value>Asegúrese de ver este video, prestando mucha atención ya que será probado con este material.</value>
     <comment/>
   </data>
   <data name="TVP_Instruction_Steps_UL2" xml:space="preserve">
-    <value>Después de ver el video hasta el final. Se podrá hacer clic en el botón de abajo que dice 'Ir a prueba'. Haga clic en él para comenzar la prueba.</value>
+    <value>Después de ver este video, el botón 'Hacer la prueba' a continuación se desbloqueará. Haga clic en él para comenzar la prueba.</value>
+    <comment/>
+  </data>
+  <data name="TVP_Instruction_Steps_UL3" xml:space="preserve">
+    <value>Cuando llegue a la página de prueba, asegúrese de ingresar su nombre completo y dirección de correo electrónico.</value>
+    <comment/>
+  </data>
+  <data name="TVP_Instruction_Steps_UL4" xml:space="preserve">
+    <value>Una vez que haya completado la prueba, se le dará un código de carta 6. Se le pedirá que proporcione este código a su reclutador.</value>
+    <comment/>
+  </data>
+  <data name="TVP_Instruction_Steps_UL5" xml:space="preserve">
+    <value>Después de haberle dado su código al reclutador, el reclutador le dará todo el PPE requerido, la información de contacto y la dirección del lugar de trabajo asignado.</value>
     <comment/>
   </data>
   <data name="TVP_Test_Button" xml:space="preserve">
@@ -186,7 +198,7 @@
     <comment/>
   </data>
   <data name="TF_Code_Copy_Instructions" xml:space="preserve">
-    <value>Copie el código a continuación y entréguelo a su supervisor para que confirme que completó la prueba. NO navegue fuera de esta página sin escribir el código o de lo contrario tendrá que ver el video y completar la prueba nuevamente para obtener otro código.</value>
+    <value>Copie el código a continuación y conviértalo en su reclutador para que confirmen que completó la prueba. NO navegue fuera de esta página sin escribir el código o de lo contrario tendrá que ver el video y completar la prueba nuevamente para obtener otro código.</value>
     <comment/>
   </data>
   <data name="TF_Code" xml:space="preserve">
@@ -222,7 +234,7 @@
     <comment/>
   </data>
   <data name="About_Preamble" xml:space="preserve">
-    <value>Marathon Electrical LLC. se enorgullece de su iniciativa de capacitar a nuestros empleados para enfrentar las condiciones, en ocasiones adversas, presentes en nuestro campo de trabajo. Este sitio web es un paso hacia esa iniciativa. Proporciona videos de capacitación para que los empleados los vean, seguidos de una breve prueba. La prueba se enviará al supervisor de los empleados, que confirmará que el empleado ha visto el video de capacitación apropiado. Esto nos permite ser responsables de lo que nuestros empleados hacen y no saben, y de la capacitación que han recibido.</value>
+    <value>Marathon Electrical LLC. se enorgullece de su iniciativa de capacitar a nuestros empleados para enfrentar las condiciones adversas presentes en nuestro campo de trabajo. Este sitio web es un paso hacia esa iniciativa. Proporciona videos de capacitación para que los empleados los vean, seguidos de una breve prueba. La prueba se enviará al reclutador del empleado, que confirmará que el empleado ha completado el video de capacitación apropiado. Esto nos permite ser responsables de lo que saben nuestros empleados y de la capacitación que han recibido.</value>
     <comment/>
   </data>
   <data name="About_Created_By" xml:space="preserve">

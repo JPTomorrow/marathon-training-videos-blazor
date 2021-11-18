@@ -2,32 +2,21 @@
 @inject IStringLocalizer<App> localizer
 @inject NavigationManager navigationManager
 
-<style>
-    .nav-links a {
-        color: orangered;
-    }
-
-    .nav-links a:hover {
-        color: maroon;
-        text-decoration: none;
-    }
-</style>
-
 <div class="page">
     <div class="main">
-        <div class="top-row px-4">
-            
+        <div class="top-row px-4 mcolor-bg-black-75">
+
             <img src="/assets/logo.png" alt="logo" class="logo" />
             <ul class="nav-links">
-                <li><a href="https://docs.microsoft.com/aspnet/" @onclick="@GoToTrainingVids"
+                <li><a class="mcolor-txt-red" href="https://docs.microsoft.com/aspnet/" @onclick="@GoToTrainingVids"
                         @onclick:preventDefault>@localizer["Training Videos"]</a></li>
-                <li><a href="https://docs.microsoft.com/aspnet/" @onclick="@GoToAbout"
+                <li><a class="mcolor-txt-red" href="https://docs.microsoft.com/aspnet/" @onclick="@GoToAbout"
                         @onclick:preventDefault>@localizer["About"]</a></li>
             </ul>
             <ChooseLanguage />
         </div>
 
-        <div class="container-type-one">
+        <div class="container-type-one mcolor-bg-black-75">
             @Body
         </div>
     </div>

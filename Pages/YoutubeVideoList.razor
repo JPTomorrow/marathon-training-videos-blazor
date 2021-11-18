@@ -7,9 +7,21 @@
 @inject NavigationManager navMan
 @inject IStringLocalizer<App> localizer
 
+<div id="ytvl-search-container">
+    <i id="ytvl-icon-search" class="material-icons icon-white">search</i>
+    <input id="ytvl-search-box" @bind-value="SearchText" @bind-value:event="oninput" placeholder="Search by title" />
+</div>
+
 @if (videos == null)
 {
-    <p><em>Loading...</em></p>
+    @if (!filteredVideos.Any())
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <p><em>No videos match that name</em></p>
+    }
 }
 else
 {
@@ -22,7 +34,7 @@ else
                 </tr>
             </thead>
             <tbody>
-                @foreach (var v in videos)
+                @foreach (var v in filteredVideos)
                 {
                     <tr>
                         <td>
@@ -42,6 +54,12 @@ else
 
 @code {
     private YoutubeVideoEntry[] videos;
+    private List<YoutubeVideoEntry> filteredVideos
+    {
+        get => string.IsNullOrWhiteSpace(SearchText) ? videos.ToList() :
+        videos.Where(v => v.Title.ToLower().Contains(SearchText.ToLower())).ToList();
+    }
+    private string SearchText { get; set; }
 
     protected override void OnInitialized()
     {

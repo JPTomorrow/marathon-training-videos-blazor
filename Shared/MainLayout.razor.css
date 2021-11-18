@@ -13,7 +13,6 @@
 }
 
 .top-row {
-  background-color: #1b1b1b;
   border-bottom: 1px solid #d6d5d5;
   justify-content: flex-start;
   height: 3.5rem;
@@ -27,7 +26,7 @@
 }
 
 .logo {
-  width: 70px;
+  width: 125px;
 }
 
 .nav-links {
@@ -37,11 +36,13 @@
 .nav-links li {
   display: inline;
   white-space: nowrap;
-  margin-left: 1.5rem;
+}
+
+.nav-links > li:first-of-type {
+  margin-right: 1.5rem;
 }
 
 .container-type-one {
-  background-color: rgb(24, 24, 24);
   width: 95%;
   border-radius: 20px;
   margin-left: auto;
@@ -63,7 +64,9 @@
     padding: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 150px;
+    width: 200px;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 
   .top-row ul {
@@ -79,10 +82,15 @@
   .nav-links li {
     margin-left: auto;
     margin-right: auto;
-    border: orangered 1px solid;
+    border: #eb1e23 1px solid;
     padding: 10px;
     border-radius: 10px;
   }
+}
+
+.nav-links a:hover {
+  color: ghostwhite;
+  text-decoration: none;
 }
 
 @media (min-width: 641px) {

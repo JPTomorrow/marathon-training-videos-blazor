@@ -126,9 +126,15 @@ using System.Globalization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 43 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\YoutubeVideoList.razor"
+#line 55 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\YoutubeVideoList.razor"
        
     private YoutubeVideoEntry[] videos;
+    private List<YoutubeVideoEntry> filteredVideos
+    {
+        get => string.IsNullOrWhiteSpace(SearchText) ? videos.ToList() :
+        videos.Where(v => v.Title.ToLower().Contains(SearchText.ToLower())).ToList();
+    }
+    private string SearchText { get; set; }
 
     protected override void OnInitialized()
     {

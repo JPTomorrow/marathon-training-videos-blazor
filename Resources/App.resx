@@ -142,15 +142,27 @@
     <comment/>
   </data>
   <data name="TVP_Instruction_Steps_P1" xml:space="preserve">
-    <value>Please read carefully and complete all of the steps in order to ensure that you supervisor is informed that you have watched this video in its entirety.</value>
+    <value>Please read carefully and complete all of the steps in order to ensure that your recruiter is informed that you have watched this video.</value>
     <comment/>
   </data>
   <data name="TVP_Instruction_Steps_UL1" xml:space="preserve">
-    <value>Play the video and watch it all the way through, paying close attention as you  will be tested on the material in the video.</value>
+    <value>Make sure to watch this video,  paying close attention as you will be tested on this material.</value>
     <comment/>
   </data>
   <data name="TVP_Instruction_Steps_UL2" xml:space="preserve">
-    <value>After watching the video all the way to the end. The button below that says 'Go To Test' will becaome clickable. Click on it to begin the test.</value>
+    <value>After watching this video, the 'Take the test' button below will become unlocked. Click on it to begin the test.</value>
+    <comment/>
+  </data>
+  <data name="TVP_Instruction_Steps_UL3" xml:space="preserve">
+    <value>When you arrive to the test page, make sure to input your Full name and Email address.</value>
+    <comment/>
+  </data>
+  <data name="TVP_Instruction_Steps_UL4" xml:space="preserve">
+    <value>Once you have completed the test you will be given a 6 charter code. You will be required to give this code to your recruiter.</value>
+    <comment/>
+  </data>
+  <data name="TVP_Instruction_Steps_UL5" xml:space="preserve">
+    <value>After you have given your code to the recruiter, the recruiter will give you all the required PPE, contact information and address to your assigned jobsite.</value>
     <comment/>
   </data>
   <data name="TVP_Test_Button" xml:space="preserve">
@@ -186,7 +198,7 @@
     <comment/>
   </data>
   <data name="TF_Code_Copy_Instructions" xml:space="preserve">
-    <value>Copy the code below and turn it into your supervisor for them to confirm that you                     completed the test. DO NOT navigate away from this page without writing down the code or else you will have                     to watch the video and complete the test again to get another code.</value>
+    <value>Copy the code below and turn it into your recruiter for them to confirm that you completed the test. DO NOT navigate away from this page without writing down the code or else you will have to watch the video and complete the test again to get another code.</value>
     <comment/>
   </data>
   <data name="TF_Code" xml:space="preserve">
@@ -222,7 +234,7 @@
     <comment/>
   </data>
   <data name="About_Preamble" xml:space="preserve">
-    <value>Marathon Electrical LLC. prides itself in its initiative to train our employee's to face the, sometimes adverse, conditions present in our field of work. This website is a step towards that initiative. It provides training videos for employees to watch, followed by a short test. The test will be submitted to the employees supervisor, which will confirm the employee has seen the appropriate training video. This allows us to be accountable for what our employees do and don't know, and what training they have recieved.</value>
+    <value>Marathon Electrical LLC. prides itself in its initiative to train our employees to face the adverse conditions present in our field of work. This website is a step towards that initiative. It provides training videos for employees to watch, followed by a short test. The test will be submitted to the employee's recruiter, which will confirm the employee has completed the appropriate training video. This allows us to be accountable for what our employees know, and what training they have recieved.</value>
     <comment/>
   </data>
   <data name="About_Created_By" xml:space="preserve">

@@ -13,12 +13,49 @@ tr[b-c9tz53hqp8] {
 }
 
 .tvl-video-entry[b-c9tz53hqp8] {
-  color: orangered;
+  color: #eb1e23;
 }
 
 .tvl-video-entry:hover[b-c9tz53hqp8] {
-  color: maroon;
+  color: #e0e721;
   text-decoration: none;
+}
+
+#ytvl-search-container[b-c9tz53hqp8] {
+  margin-bottom: 20px;
+}
+
+#ytvl-search-box[b-c9tz53hqp8] {
+  background-color: rgb(87, 87, 87);
+  width: auto;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  color: ghostwhite;
+  font-size: 12pt;
+  vertical-align: middle;
+}
+
+#ytvl-search-box:focus[b-c9tz53hqp8] {
+  outline: #eb1e23;
+}
+
+@media (max-width: 920px) {
+  #ytvl-search-container[b-c9tz53hqp8] {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+}
+
+#ytvl-icon-search[b-c9tz53hqp8] {
+  color: ghostwhite;
+  vertical-align: middle;
+  margin-right: 7px;
+  border-radius: 5px;
+  padding: 2px;
+  border: 1px solid ghostwhite;
 }
 /* _content/MarathonTutorialWebsite/Shared/MainLayout.razor.rz.scp.css */
 .page[b-x4x6nkc4tw] {
@@ -36,7 +73,6 @@ tr[b-c9tz53hqp8] {
 }
 
 .top-row[b-x4x6nkc4tw] {
-  background-color: #1b1b1b;
   border-bottom: 1px solid #d6d5d5;
   justify-content: flex-start;
   height: 3.5rem;
@@ -50,7 +86,7 @@ tr[b-c9tz53hqp8] {
 }
 
 .logo[b-x4x6nkc4tw] {
-  width: 70px;
+  width: 125px;
 }
 
 .nav-links[b-x4x6nkc4tw] {
@@ -60,11 +96,13 @@ tr[b-c9tz53hqp8] {
 .nav-links li[b-x4x6nkc4tw] {
   display: inline;
   white-space: nowrap;
-  margin-left: 1.5rem;
+}
+
+.nav-links > li:first-of-type[b-x4x6nkc4tw] {
+  margin-right: 1.5rem;
 }
 
 .container-type-one[b-x4x6nkc4tw] {
-  background-color: rgb(24, 24, 24);
   width: 95%;
   border-radius: 20px;
   margin-left: auto;
@@ -86,7 +124,9 @@ tr[b-c9tz53hqp8] {
     padding: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 150px;
+    width: 200px;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 
   .top-row ul[b-x4x6nkc4tw] {
@@ -102,10 +142,15 @@ tr[b-c9tz53hqp8] {
   .nav-links li[b-x4x6nkc4tw] {
     margin-left: auto;
     margin-right: auto;
-    border: orangered 1px solid;
+    border: #eb1e23 1px solid;
     padding: 10px;
     border-radius: 10px;
   }
+}
+
+.nav-links a:hover[b-x4x6nkc4tw] {
+  color: ghostwhite;
+  text-decoration: none;
 }
 
 @media (min-width: 641px) {

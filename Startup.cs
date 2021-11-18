@@ -30,10 +30,10 @@ namespace MarathonTutorialWebsite
             services.AddLocalization(options => options.ResourcesPath = "Resources"); // add localization
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
-            services.AddSingleton<YoutubeVideoService>();
-            services.AddSingleton<FormDataService>();
-            services.AddSingleton<SMTPLoginCredentials>();
+            // services.AddSingleton<WeatherForecastService>();
+            services.AddScoped<FormDataService>();
+            services.AddScoped<YoutubeVideoService>();
+            services.AddScoped<SMTPLoginCredentials>();
         }
 
         private RequestLocalizationOptions GetLocalizationOptions()

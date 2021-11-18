@@ -113,14 +113,12 @@ using System.Text.Encodings.Web;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 95 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TutorialVideoPage.razor"
+#line 115 "C:\Users\Jmorrow\Desktop\code\work-code\blazor\MarathonTutorialWebsite\Pages\TutorialVideoPage.razor"
             
     [Parameter]
     public string Title { get; set; }
     [Parameter]
     public string Url { get; set; }
-    [Parameter]
-    public string FormUrl { get; set; }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -131,12 +129,11 @@ using System.Text.Encodings.Web;
     {
         Title = Title ?? "";
         Url = Url ?? "";
-        FormUrl = FormUrl ?? "";
     }
 
     private void GoToTest()
     {
-        var url = "/test_form/" + Title + "/" + UrlEncoder.Create().Encode(FormUrl);
+        var url = "/test_form/" + Title;
         navigationManager.NavigateTo(url);
     }
 

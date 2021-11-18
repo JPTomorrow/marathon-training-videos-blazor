@@ -11,10 +11,47 @@ tr[b-c9tz53hqp8] {
 }
 
 .tvl-video-entry[b-c9tz53hqp8] {
-  color: orangered;
+  color: #eb1e23;
 }
 
 .tvl-video-entry:hover[b-c9tz53hqp8] {
-  color: maroon;
+  color: #e0e721;
   text-decoration: none;
+}
+
+#ytvl-search-container[b-c9tz53hqp8] {
+  margin-bottom: 20px;
+}
+
+#ytvl-search-box[b-c9tz53hqp8] {
+  background-color: rgb(87, 87, 87);
+  width: auto;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  color: ghostwhite;
+  font-size: 12pt;
+  vertical-align: middle;
+}
+
+#ytvl-search-box:focus[b-c9tz53hqp8] {
+  outline: #eb1e23;
+}
+
+@media (max-width: 920px) {
+  #ytvl-search-container[b-c9tz53hqp8] {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+}
+
+#ytvl-icon-search[b-c9tz53hqp8] {
+  color: ghostwhite;
+  vertical-align: middle;
+  margin-right: 7px;
+  border-radius: 5px;
+  padding: 2px;
+  border: 1px solid ghostwhite;
 }
